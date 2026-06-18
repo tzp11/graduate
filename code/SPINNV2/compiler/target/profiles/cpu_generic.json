@@ -1,0 +1,123 @@
+{
+  "name": "cpu_generic",
+  "word_size": 64,
+  "endianness": "little",
+  "alignment": 16,
+  "memory": {
+    "activation_arena_max": 67108864,
+    "scratch_arena_max": 33554432,
+    "allow_runtime_malloc": false
+  },
+  "features": [
+    "fp32"
+  ],
+  "layouts": [
+    "NCHW"
+  ],
+  "backends": [
+    "ref",
+    "cpu",
+    "simd"
+  ],
+  "ops": {
+    "Add": [
+      "simd",
+      "ref"
+    ],
+    "Cast": [
+      "ref"
+    ],
+    "Concat": [
+      "ref"
+    ],
+    "Conv": [
+      "simd_pointwise_1x1",
+      "simd_depthwise_direct",
+      "simd_winograd_3x3s1",
+      "simd_im2col_gemm",
+      "im2col_gemm",
+      "ref"
+    ],
+    "Div": [
+      "simd",
+      "ref"
+    ],
+    "Flatten": [
+      "ref"
+    ],
+    "GatherElements": [
+      "ref"
+    ],
+    "Gather": [
+      "ref"
+    ],
+    "Gemm": [
+      "simd_direct",
+      "direct",
+      "ref"
+    ],
+    "MatMul": [
+      "simd_direct",
+      "ref"
+    ],
+    "MaxPool": [
+      "ref"
+    ],
+    "Mod": [
+      "ref"
+    ],
+    "Mul": [
+      "simd",
+      "ref"
+    ],
+    "ReduceMax": [
+      "simd",
+      "ref"
+    ],
+    "ReduceMean": [
+      "simd",
+      "ref"
+    ],
+    "Relu": [
+      "simd",
+      "ref"
+    ],
+    "Reshape": [
+      "ref"
+    ],
+    "Resize": [
+      "ref"
+    ],
+    "Sigmoid": [
+      "simd",
+      "ref"
+    ],
+    "Softmax": [
+      "simd",
+      "ref"
+    ],
+    "Split": [
+      "ref"
+    ],
+    "Slice": [
+      "ref"
+    ],
+    "Sub": [
+      "simd",
+      "ref"
+    ],
+    "Tile": [
+      "ref"
+    ],
+    "TopK": [
+      "ref"
+    ],
+    "Transpose": [
+      "simd",
+      "ref"
+    ],
+    "Unsqueeze": [
+      "ref"
+    ]
+  }
+}
