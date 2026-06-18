@@ -1,0 +1,72 @@
+{
+  "generated_at_utc": "2026-05-28T07:57:16.307604+00:00",
+  "scope": "windows_stage_engineering_metrics",
+  "notes": [
+    "p95/p99 are null when the source benchmark JSON did not record raw timing samples or those quantiles.",
+    "Generated C status is a static capability report; batch fault injection still uses Runtime CLI/ctypes."
+  ],
+  "rows": [
+    {
+      "model": "resnet50_eurosat",
+      "baseline_spk_bytes": 94052792,
+      "protected_spk_bytes": 94053668,
+      "plan_json_bytes": 4329,
+      "naive_activation_bytes": 67954736,
+      "planned_activation_bytes": 14249984,
+      "memory_reduction_ratio": 0.7903018267924696,
+      "scratch_arena_bytes": 7375872,
+      "protection_scratch_bytes": 3211264,
+      "protected_node_count": 30,
+      "protection_modes": [
+        "dmr_compare_rerun",
+        "range_guard_rerun"
+      ],
+      "baseline_avg_ms": 109.89118769975903,
+      "protected_avg_ms": 129.42539665527875,
+      "latency_overhead_ms": 19.534208955519716,
+      "latency_overhead_ratio": 0.17775955801743093,
+      "clean_false_alarm_rate": 0.00390625,
+      "detected_faults": 323,
+      "recovered_faults": 309,
+      "unprotected_critical_failures": 16,
+      "protected_critical_failures": 4,
+      "observed_reduction_ratio": 0.75,
+      "used_peak_extra_memory_bytes": 3211264
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "baseline_spk_bytes": 9342072,
+      "protected_spk_bytes": 9343228,
+      "plan_json_bytes": 4555,
+      "naive_activation_bytes": 146338400,
+      "planned_activation_bytes": 11468800,
+      "memory_reduction_ratio": 0.9216282260841994,
+      "scratch_arena_bytes": 20070400,
+      "protection_scratch_bytes": 3276800,
+      "protected_node_count": 40,
+      "protection_modes": [
+        "dmr_compare_rerun"
+      ],
+      "baseline_avg_ms": 167.7848,
+      "baseline_p50_ms": 166.8963,
+      "baseline_p90_ms": 171.7354,
+      "baseline_p95_ms": null,
+      "baseline_p99_ms": null,
+      "baseline_max_ms": 173.7875,
+      "protected_avg_ms": 198.0945,
+      "protected_p50_ms": 198.8332,
+      "protected_p90_ms": 202.2184,
+      "protected_p95_ms": null,
+      "protected_p99_ms": null,
+      "protected_max_ms": 204.7774,
+      "latency_overhead_ms": 30.30970000000002,
+      "latency_overhead_ratio": 0.1806462802351585,
+      "activation_prior_unprotected_critical_failures": 56,
+      "activation_prior_protected_critical_failures": 43,
+      "activation_prior_reduction_ratio": 0.23214285714285715,
+      "stratified_unprotected_critical_failures": 77,
+      "stratified_protected_critical_failures": 13,
+      "stratified_reduction_ratio": 0.8311688311688312
+    }
+  ]
+}

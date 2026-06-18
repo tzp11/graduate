@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "model_id": "resnet50_imagenet_arch",
+  "platform_profile": "win_x64_cpu_ref",
+  "fault_prior": "single_bit_validation",
+  "budgets": {
+    "extra_memory_bytes": 8000
+  },
+  "nodes": [
+    {
+      "node_id": 72,
+      "tensor_id": 181,
+      "mode": "dmr_compare_rerun"
+    }
+  ]
+}

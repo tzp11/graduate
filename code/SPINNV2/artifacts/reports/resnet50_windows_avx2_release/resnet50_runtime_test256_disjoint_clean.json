@@ -1,0 +1,4014 @@
+{
+  "model_id": "resnet50_eurosat_gpu_prevalidation",
+  "platform_profile": "windows_x64_avx2_release",
+  "evaluation": {
+    "split": "test",
+    "offset": 0,
+    "samples": 256,
+    "warmup_samples": 3
+  },
+  "clean_baseline": {
+    "accuracy": 0.9765625,
+    "latency_ms": {
+      "avg": 112.6771996205207,
+      "p50": 112.53139981999993,
+      "p90": 120.8391496911645,
+      "min": 101.14549938589334,
+      "max": 161.22219990938902
+    }
+  },
+  "clean_protected": {
+    "accuracy": 0.9765625,
+    "prediction_agreement_with_baseline": 1.0,
+    "max_abs_vs_unprotected_reference": 0.0,
+    "false_alarm_samples": 6,
+    "false_alarm_rate": 0.0234375,
+    "stats": {
+      "injected_faults": 0,
+      "detected_faults": 6,
+      "recovered_faults": 0,
+      "unrecovered_faults": 6,
+      "rerun_count": 6
+    },
+    "latency_ms": {
+      "avg": 137.65834179139347,
+      "p50": 136.27404998987913,
+      "p90": 149.74649995565414,
+      "min": 123.86259995400906,
+      "max": 333.21289997547865
+    },
+    "range_observations": [
+      {
+        "node_id": 0,
+        "tensor_id": 109,
+        "observed_min": 0.0,
+        "observed_max": 34.50386047363281,
+        "observations": 256,
+        "configured_lower_bound": -3.5597428894042973,
+        "configured_upper_bound": 37.46205612182617,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 3,
+        "tensor_id": 112,
+        "observed_min": 0.0,
+        "observed_max": 24.596229553222656,
+        "observations": 256,
+        "configured_lower_bound": -2.546707220077515,
+        "configured_upper_bound": 26.801061697006226,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 4,
+        "tensor_id": 113,
+        "observed_min": -19.07086753845215,
+        "observed_max": 17.786977767944336,
+        "observations": 256,
+        "configured_lower_bound": -23.307968549728393,
+        "configured_upper_bound": 19.76325457572937,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 5,
+        "tensor_id": 114,
+        "observed_min": -35.550621032714844,
+        "observed_max": 21.41343116760254,
+        "observations": 256,
+        "configured_lower_bound": -93.19858882904052,
+        "configured_upper_bound": 51.91192958831787,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 6,
+        "tensor_id": 115,
+        "observed_min": 0.0,
+        "observed_max": 13.549869537353516,
+        "observations": 256,
+        "configured_lower_bound": -1.2411065769195557,
+        "configured_upper_bound": 13.061169214248656,
+        "outside_configured_bounds": true
+      },
+      {
+        "node_id": 8,
+        "tensor_id": 117,
+        "observed_min": 0.0,
+        "observed_max": 21.588787078857422,
+        "observations": 256,
+        "configured_lower_bound": -2.1601335525512697,
+        "configured_upper_bound": 22.73283405303955,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 10,
+        "tensor_id": 119,
+        "observed_min": 0.0,
+        "observed_max": 16.51902198791504,
+        "observations": 256,
+        "configured_lower_bound": -1.7886225128173827,
+        "configured_upper_bound": 18.823122634887692,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 16,
+        "tensor_id": 125,
+        "observed_min": 0.0,
+        "observed_max": 12.26917552947998,
+        "observations": 256,
+        "configured_lower_bound": -1.147602367401123,
+        "configured_upper_bound": 12.077148723602296,
+        "outside_configured_bounds": true
+      },
+      {
+        "node_id": 18,
+        "tensor_id": 127,
+        "observed_min": -18.551498413085938,
+        "observed_max": 12.960153579711914,
+        "observations": 256,
+        "configured_lower_bound": -19.53294617652893,
+        "configured_upper_bound": 20.064285821914673,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 25,
+        "tensor_id": 134,
+        "observed_min": 0.0,
+        "observed_max": 12.568056106567383,
+        "observations": 256,
+        "configured_lower_bound": -1.3038626861572267,
+        "configured_upper_bound": 13.721602554321288,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 33,
+        "tensor_id": 142,
+        "observed_min": 0.0,
+        "observed_max": 15.361868858337402,
+        "observations": 256,
+        "configured_lower_bound": -1.0968273067474366,
+        "configured_upper_bound": 11.542801656723023,
+        "outside_configured_bounds": true
+      },
+      {
+        "node_id": 64,
+        "tensor_id": 173,
+        "observed_min": -46.76361846923828,
+        "observed_max": 58.03105545043945,
+        "observations": 256,
+        "configured_lower_bound": -50.90160694122314,
+        "configured_upper_bound": 60.310149574279784,
+        "outside_configured_bounds": false
+      }
+    ],
+    "range_violation_node_ids": [
+      6,
+      16,
+      33
+    ]
+  },
+  "latency_overhead": {
+    "avg_ms": 24.981142170872772,
+    "avg_ratio": 0.22170538720349264
+  },
+  "samples": [
+    {
+      "sample_id": "test_000000",
+      "dataset_index": 9437,
+      "label": 3,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000001",
+      "dataset_index": 5194,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000002",
+      "dataset_index": 1290,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000003",
+      "dataset_index": 22168,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000004",
+      "dataset_index": 22507,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000005",
+      "dataset_index": 13421,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000006",
+      "dataset_index": 173,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000007",
+      "dataset_index": 19545,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000008",
+      "dataset_index": 7262,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000009",
+      "dataset_index": 12057,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000010",
+      "dataset_index": 7123,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000011",
+      "dataset_index": 26573,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000012",
+      "dataset_index": 8925,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000013",
+      "dataset_index": 14387,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000014",
+      "dataset_index": 19813,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000015",
+      "dataset_index": 10983,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000016",
+      "dataset_index": 25026,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000017",
+      "dataset_index": 15334,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000018",
+      "dataset_index": 7555,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000019",
+      "dataset_index": 20740,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000020",
+      "dataset_index": 5153,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000021",
+      "dataset_index": 16538,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000022",
+      "dataset_index": 8836,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000023",
+      "dataset_index": 200,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000024",
+      "dataset_index": 8842,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000025",
+      "dataset_index": 6075,
+      "label": 2,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000026",
+      "dataset_index": 1246,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000027",
+      "dataset_index": 10705,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000028",
+      "dataset_index": 5657,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000029",
+      "dataset_index": 19087,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000030",
+      "dataset_index": 6971,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000031",
+      "dataset_index": 8650,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000032",
+      "dataset_index": 17102,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000033",
+      "dataset_index": 2683,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000034",
+      "dataset_index": 8769,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000035",
+      "dataset_index": 2688,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000036",
+      "dataset_index": 9206,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000037",
+      "dataset_index": 3498,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000038",
+      "dataset_index": 3155,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000039",
+      "dataset_index": 21481,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000040",
+      "dataset_index": 9481,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000041",
+      "dataset_index": 5019,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000042",
+      "dataset_index": 9704,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000043",
+      "dataset_index": 15243,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000044",
+      "dataset_index": 14631,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000045",
+      "dataset_index": 20291,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000046",
+      "dataset_index": 16200,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000047",
+      "dataset_index": 19950,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000048",
+      "dataset_index": 2815,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000049",
+      "dataset_index": 6284,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000050",
+      "dataset_index": 25188,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000051",
+      "dataset_index": 9508,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000052",
+      "dataset_index": 1721,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000053",
+      "dataset_index": 10126,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000054",
+      "dataset_index": 13792,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 1,
+        "recovered_faults": 0,
+        "unrecovered_faults": 1,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sample_id": "test_000055",
+      "dataset_index": 13814,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000056",
+      "dataset_index": 17877,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000057",
+      "dataset_index": 18380,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000058",
+      "dataset_index": 21128,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000059",
+      "dataset_index": 945,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000060",
+      "dataset_index": 14915,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000061",
+      "dataset_index": 6338,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000062",
+      "dataset_index": 5701,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000063",
+      "dataset_index": 19536,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000064",
+      "dataset_index": 19841,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000065",
+      "dataset_index": 5149,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000066",
+      "dataset_index": 23123,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000067",
+      "dataset_index": 6631,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000068",
+      "dataset_index": 20217,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000069",
+      "dataset_index": 12261,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000070",
+      "dataset_index": 6337,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000071",
+      "dataset_index": 17173,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000072",
+      "dataset_index": 12546,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000073",
+      "dataset_index": 21376,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000074",
+      "dataset_index": 20115,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 1,
+        "recovered_faults": 0,
+        "unrecovered_faults": 1,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sample_id": "test_000075",
+      "dataset_index": 8604,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000076",
+      "dataset_index": 25545,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000077",
+      "dataset_index": 18525,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000078",
+      "dataset_index": 1341,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000079",
+      "dataset_index": 18169,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000080",
+      "dataset_index": 19686,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000081",
+      "dataset_index": 7995,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000082",
+      "dataset_index": 3954,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000083",
+      "dataset_index": 4405,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000084",
+      "dataset_index": 21595,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000085",
+      "dataset_index": 12033,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000086",
+      "dataset_index": 25460,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000087",
+      "dataset_index": 24912,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000088",
+      "dataset_index": 3566,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000089",
+      "dataset_index": 8135,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000090",
+      "dataset_index": 20131,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000091",
+      "dataset_index": 22916,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000092",
+      "dataset_index": 210,
+      "label": 0,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000093",
+      "dataset_index": 802,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000094",
+      "dataset_index": 18487,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000095",
+      "dataset_index": 22634,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000096",
+      "dataset_index": 6720,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000097",
+      "dataset_index": 18846,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000098",
+      "dataset_index": 18584,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000099",
+      "dataset_index": 354,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000100",
+      "dataset_index": 11019,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000101",
+      "dataset_index": 22946,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000102",
+      "dataset_index": 24421,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000103",
+      "dataset_index": 17347,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000104",
+      "dataset_index": 21998,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000105",
+      "dataset_index": 21097,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000106",
+      "dataset_index": 24053,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000107",
+      "dataset_index": 1610,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000108",
+      "dataset_index": 12234,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000109",
+      "dataset_index": 24535,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000110",
+      "dataset_index": 25143,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000111",
+      "dataset_index": 6153,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000112",
+      "dataset_index": 17586,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000113",
+      "dataset_index": 23454,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000114",
+      "dataset_index": 6348,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000115",
+      "dataset_index": 9697,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000116",
+      "dataset_index": 24077,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000117",
+      "dataset_index": 2944,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000118",
+      "dataset_index": 26521,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000119",
+      "dataset_index": 5423,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000120",
+      "dataset_index": 18382,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000121",
+      "dataset_index": 7710,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000122",
+      "dataset_index": 25004,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000123",
+      "dataset_index": 22229,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000124",
+      "dataset_index": 25520,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000125",
+      "dataset_index": 25349,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000126",
+      "dataset_index": 21629,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000127",
+      "dataset_index": 14425,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000128",
+      "dataset_index": 3408,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000129",
+      "dataset_index": 20326,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000130",
+      "dataset_index": 3904,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000131",
+      "dataset_index": 11677,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000132",
+      "dataset_index": 19308,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000133",
+      "dataset_index": 7664,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000134",
+      "dataset_index": 13437,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 1,
+        "recovered_faults": 0,
+        "unrecovered_faults": 1,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sample_id": "test_000135",
+      "dataset_index": 11146,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000136",
+      "dataset_index": 14835,
+      "label": 5,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000137",
+      "dataset_index": 16360,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000138",
+      "dataset_index": 7408,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000139",
+      "dataset_index": 22418,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000140",
+      "dataset_index": 18193,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000141",
+      "dataset_index": 10619,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000142",
+      "dataset_index": 26962,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000143",
+      "dataset_index": 15471,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000144",
+      "dataset_index": 13622,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000145",
+      "dataset_index": 11908,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000146",
+      "dataset_index": 6150,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000147",
+      "dataset_index": 7610,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000148",
+      "dataset_index": 20551,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000149",
+      "dataset_index": 15053,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000150",
+      "dataset_index": 12788,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000151",
+      "dataset_index": 6044,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000152",
+      "dataset_index": 21231,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 1,
+        "recovered_faults": 0,
+        "unrecovered_faults": 1,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sample_id": "test_000153",
+      "dataset_index": 5956,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000154",
+      "dataset_index": 21745,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000155",
+      "dataset_index": 21820,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000156",
+      "dataset_index": 6970,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000157",
+      "dataset_index": 6808,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000158",
+      "dataset_index": 14481,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000159",
+      "dataset_index": 5597,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000160",
+      "dataset_index": 3176,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000161",
+      "dataset_index": 2692,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000162",
+      "dataset_index": 21679,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000163",
+      "dataset_index": 7415,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000164",
+      "dataset_index": 14455,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000165",
+      "dataset_index": 14723,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000166",
+      "dataset_index": 24147,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000167",
+      "dataset_index": 16100,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000168",
+      "dataset_index": 4672,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000169",
+      "dataset_index": 22527,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000170",
+      "dataset_index": 19489,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000171",
+      "dataset_index": 2569,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000172",
+      "dataset_index": 7399,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000173",
+      "dataset_index": 18582,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000174",
+      "dataset_index": 698,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000175",
+      "dataset_index": 15518,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000176",
+      "dataset_index": 1757,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000177",
+      "dataset_index": 12389,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000178",
+      "dataset_index": 19597,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000179",
+      "dataset_index": 26402,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000180",
+      "dataset_index": 26248,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000181",
+      "dataset_index": 26225,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000182",
+      "dataset_index": 16981,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000183",
+      "dataset_index": 2582,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000184",
+      "dataset_index": 21227,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000185",
+      "dataset_index": 5722,
+      "label": 1,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000186",
+      "dataset_index": 18486,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000187",
+      "dataset_index": 10303,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000188",
+      "dataset_index": 18230,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000189",
+      "dataset_index": 3562,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000190",
+      "dataset_index": 2000,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000191",
+      "dataset_index": 10195,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000192",
+      "dataset_index": 6579,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000193",
+      "dataset_index": 12257,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000194",
+      "dataset_index": 4645,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000195",
+      "dataset_index": 848,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000196",
+      "dataset_index": 510,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000197",
+      "dataset_index": 13159,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000198",
+      "dataset_index": 16533,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000199",
+      "dataset_index": 6570,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000200",
+      "dataset_index": 16030,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000201",
+      "dataset_index": 21932,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000202",
+      "dataset_index": 12323,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 1,
+        "recovered_faults": 0,
+        "unrecovered_faults": 1,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sample_id": "test_000203",
+      "dataset_index": 15097,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000204",
+      "dataset_index": 24910,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000205",
+      "dataset_index": 1381,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000206",
+      "dataset_index": 2528,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000207",
+      "dataset_index": 13071,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000208",
+      "dataset_index": 20894,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000209",
+      "dataset_index": 1576,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000210",
+      "dataset_index": 18553,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000211",
+      "dataset_index": 14517,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000212",
+      "dataset_index": 8115,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000213",
+      "dataset_index": 7461,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000214",
+      "dataset_index": 24972,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000215",
+      "dataset_index": 20968,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 1,
+        "recovered_faults": 0,
+        "unrecovered_faults": 1,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sample_id": "test_000216",
+      "dataset_index": 19978,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000217",
+      "dataset_index": 9167,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000218",
+      "dataset_index": 22591,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000219",
+      "dataset_index": 18105,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000220",
+      "dataset_index": 3002,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000221",
+      "dataset_index": 16998,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000222",
+      "dataset_index": 11407,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000223",
+      "dataset_index": 6123,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000224",
+      "dataset_index": 17198,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000225",
+      "dataset_index": 14099,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000226",
+      "dataset_index": 15163,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000227",
+      "dataset_index": 7296,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000228",
+      "dataset_index": 17018,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000229",
+      "dataset_index": 2959,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000230",
+      "dataset_index": 19858,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000231",
+      "dataset_index": 5321,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000232",
+      "dataset_index": 15563,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000233",
+      "dataset_index": 8265,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000234",
+      "dataset_index": 21446,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000235",
+      "dataset_index": 17172,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000236",
+      "dataset_index": 5347,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000237",
+      "dataset_index": 17217,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000238",
+      "dataset_index": 20304,
+      "label": 7,
+      "baseline_class": 7,
+      "protected_class": 7,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000239",
+      "dataset_index": 15890,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000240",
+      "dataset_index": 18156,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000241",
+      "dataset_index": 6902,
+      "label": 2,
+      "baseline_class": 2,
+      "protected_class": 2,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000242",
+      "dataset_index": 4775,
+      "label": 1,
+      "baseline_class": 1,
+      "protected_class": 1,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000243",
+      "dataset_index": 15671,
+      "label": 5,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000244",
+      "dataset_index": 25040,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000245",
+      "dataset_index": 602,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000246",
+      "dataset_index": 7714,
+      "label": 2,
+      "baseline_class": 5,
+      "protected_class": 5,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000247",
+      "dataset_index": 17843,
+      "label": 6,
+      "baseline_class": 6,
+      "protected_class": 6,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000248",
+      "dataset_index": 26421,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000249",
+      "dataset_index": 9061,
+      "label": 3,
+      "baseline_class": 3,
+      "protected_class": 3,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000250",
+      "dataset_index": 13063,
+      "label": 4,
+      "baseline_class": 4,
+      "protected_class": 4,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000251",
+      "dataset_index": 22365,
+      "label": 8,
+      "baseline_class": 8,
+      "protected_class": 8,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000252",
+      "dataset_index": 2365,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000253",
+      "dataset_index": 1149,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000254",
+      "dataset_index": 1346,
+      "label": 0,
+      "baseline_class": 0,
+      "protected_class": 0,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sample_id": "test_000255",
+      "dataset_index": 25030,
+      "label": 9,
+      "baseline_class": 9,
+      "protected_class": 9,
+      "max_abs_difference": 0.0,
+      "stats": {
+        "injected_faults": 0,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    }
+  ]
+}

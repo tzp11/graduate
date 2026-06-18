@@ -1,0 +1,16 @@
+{
+  "workload_scope": "YOLOv10n trained/evaluated on full DIOR (18000/2000/3463); injection screen: 125 eligible samples among first 128 test images; stratified 170 nodes x 16 events",
+  "observations": 2720,
+  "eligible_samples": 125,
+  "critical_failures": 77,
+  "critical_failure_rate": 0.028308823529411765,
+  "sampled_nodes": 170,
+  "highest_risk_node": 44,
+  "highest_risk_score": 0.3376522178184152,
+  "highest_node_critical_probability": 0.375,
+  "failure_modes": {
+    "none": 2643,
+    "task_output_failure": 65,
+    "controlled_execution_error": 12
+  }
+}

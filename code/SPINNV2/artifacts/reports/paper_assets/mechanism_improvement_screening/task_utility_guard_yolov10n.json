@@ -1,0 +1,39 @@
+{
+  "summary": {
+    "mechanism": "task_utility_consistency_guard",
+    "evidence": "E:\\work\\graduatepaper\\code\\SPINNV2\\artifacts\\reports\\paper_assets\\mechanism_improvement_screening\\task_utility_guard_yolov10n_measured.json",
+    "baseline_task_output_guard_reduction": 0.5052264808362369,
+    "task_utility_guard_reduction": 0.9721254355400697,
+    "reduction_gain_vs_current": 0.4668989547038328,
+    "utility_guard_trigger_rate": 0.028,
+    "utility_clean_false_positive_rate": 0.0,
+    "decision": "adopt_as_main",
+    "reason": "task utility guard improves reduction or reduces rerun triggers under false-positive constraint"
+  },
+  "rows": [
+    {
+      "policy": "current_task_output_guard",
+      "status": "measured",
+      "events": 10000,
+      "critical_failure_reduction_ratio": 0.5052264808362369,
+      "guard_trigger_rate": 0.0146,
+      "clean_false_positive_rate": 0.0,
+      "reduction_gain_vs_current": 0.0,
+      "trigger_reduction_vs_current": 0.0,
+      "decision": "keep_as_ablation",
+      "reason": "measured baseline task output guard"
+    },
+    {
+      "policy": "task_utility_consistency_guard",
+      "status": "measured",
+      "events": 10000,
+      "critical_failure_reduction_ratio": 0.9721254355400697,
+      "guard_trigger_rate": 0.028,
+      "clean_false_positive_rate": 0.0,
+      "reduction_gain_vs_current": 0.4668989547038328,
+      "trigger_reduction_vs_current": -0.9178082191780822,
+      "decision": "adopt_as_main",
+      "reason": "task utility guard improves reduction or reduces rerun triggers under false-positive constraint"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+policy,critical_faults,detected_critical_faults,critical_coverage,false_positive_samples,clean_holdout_samples,false_positive_rate,coverage_gain_vs_minmax,decision,reason,status
+minmax,7,0,0.0,0,16384,0.0,0.0,reject,no verified coverage gain under the false-positive constraint,measured
+q99,7,0,0.0,0,16384,0.0,0.0,reject,no verified coverage gain under the false-positive constraint,measured
+q99.5,7,0,0.0,0,16384,0.0,0.0,reject,no verified coverage gain under the false-positive constraint,measured
+q99.9,7,0,0.0,0,16384,0.0,0.0,reject,no verified coverage gain under the false-positive constraint,measured

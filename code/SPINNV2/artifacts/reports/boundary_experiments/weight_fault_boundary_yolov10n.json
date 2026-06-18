@@ -1,0 +1,240 @@
+{
+  "generated_at_utc": "2026-05-28T03:17:00.937044+00:00",
+  "scope": "persistent_weight_fault_boundary_proxy",
+  "interpretation": "This experiment documents output sensitivity to persistent ONNX initializer corruption. It is a boundary experiment and is not used as the thesis main transient activation fault model.",
+  "model": "artifacts\\models\\yolov10n_dior_full_e30_b16.onnx",
+  "input_bin": "artifacts\\inputs\\yolov10n_dior_full_test_00000001.bin",
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "seed": 2026,
+  "trials": 8,
+  "bit_index": "random",
+  "events": [
+    {
+      "trial": 0,
+      "fault": {
+        "initializer_name": "model.8.m.0.cv1.conv.weight",
+        "initializer_index": 52,
+        "initializer_raw_bytes": 589824,
+        "element_index": 83750,
+        "bit_index": 6,
+        "byte_offset": 335000,
+        "byte_before": 13,
+        "byte_after": 77
+      },
+      "output": {
+        "output_shape": [
+          1,
+          300,
+          6
+        ],
+        "max_abs_diff": 6.103515625e-05,
+        "mean_abs_diff": 8.581081942793389e-07,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 404,
+        "global_argmax_after": 404,
+        "global_argmax_changed": false
+      }
+    },
+    {
+      "trial": 1,
+      "fault": {
+        "initializer_name": "model.9.cv2.conv.weight",
+        "initializer_index": 60,
+        "initializer_raw_bytes": 524288,
+        "element_index": 110261,
+        "bit_index": 31,
+        "byte_offset": 441047,
+        "byte_before": 61,
+        "byte_after": 189
+      },
+      "output": {
+        "output_shape": [
+          1,
+          300,
+          6
+        ],
+        "max_abs_diff": 627.4237060546875,
+        "mean_abs_diff": 23.77869415283203,
+        "num_abs_diff_gt_1e_3": 453,
+        "num_abs_diff_gt_1e_2": 232,
+        "global_argmax_before": 404,
+        "global_argmax_after": 404,
+        "global_argmax_changed": false
+      }
+    },
+    {
+      "trial": 2,
+      "fault": {
+        "initializer_name": "model.22.cv1.conv.weight",
+        "initializer_index": 137,
+        "initializer_raw_bytes": 393216,
+        "element_index": 31448,
+        "bit_index": 0,
+        "byte_offset": 125792,
+        "byte_before": 53,
+        "byte_after": 52
+      },
+      "output": {
+        "output_shape": [
+          1,
+          300,
+          6
+        ],
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 404,
+        "global_argmax_after": 404,
+        "global_argmax_changed": false
+      }
+    },
+    {
+      "trial": 3,
+      "fault": {
+        "initializer_name": "model.8.cv1.conv.weight",
+        "initializer_index": 49,
+        "initializer_raw_bytes": 262144,
+        "element_index": 14514,
+        "bit_index": 18,
+        "byte_offset": 58058,
+        "byte_before": 233,
+        "byte_after": 237
+      },
+      "output": {
+        "output_shape": [
+          1,
+          300,
+          6
+        ],
+        "max_abs_diff": 6.103515625e-05,
+        "mean_abs_diff": 1.1676715985231567e-06,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 404,
+        "global_argmax_after": 404,
+        "global_argmax_changed": false
+      }
+    },
+    {
+      "trial": 4,
+      "fault": {
+        "initializer_name": "model.8.m.0.cv1.conv.weight",
+        "initializer_index": 52,
+        "initializer_raw_bytes": 589824,
+        "element_index": 117874,
+        "bit_index": 0,
+        "byte_offset": 471496,
+        "byte_before": 156,
+        "byte_after": 157
+      },
+      "output": {
+        "output_shape": [
+          1,
+          300,
+          6
+        ],
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 404,
+        "global_argmax_after": 404,
+        "global_argmax_changed": false
+      }
+    },
+    {
+      "trial": 5,
+      "fault": {
+        "initializer_name": "model.23.one2one_cv2.2.0.conv.weight",
+        "initializer_index": 159,
+        "initializer_raw_bytes": 589824,
+        "element_index": 82374,
+        "bit_index": 13,
+        "byte_offset": 329497,
+        "byte_before": 183,
+        "byte_after": 151
+      },
+      "output": {
+        "output_shape": [
+          1,
+          300,
+          6
+        ],
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 404,
+        "global_argmax_after": 404,
+        "global_argmax_changed": false
+      }
+    },
+    {
+      "trial": 6,
+      "fault": {
+        "initializer_name": "model.23.one2one_cv2.1.0.conv.weight",
+        "initializer_index": 127,
+        "initializer_raw_bytes": 294912,
+        "element_index": 32966,
+        "bit_index": 22,
+        "byte_offset": 131866,
+        "byte_before": 24,
+        "byte_after": 88
+      },
+      "output": {
+        "output_shape": [
+          1,
+          300,
+          6
+        ],
+        "max_abs_diff": 0.024810791015625,
+        "mean_abs_diff": 0.00012585533841047436,
+        "num_abs_diff_gt_1e_3": 41,
+        "num_abs_diff_gt_1e_2": 8,
+        "global_argmax_before": 404,
+        "global_argmax_after": 404,
+        "global_argmax_changed": false
+      }
+    },
+    {
+      "trial": 7,
+      "fault": {
+        "initializer_name": "model.19.cv1.conv.weight",
+        "initializer_index": 107,
+        "initializer_raw_bytes": 98304,
+        "element_index": 12332,
+        "bit_index": 4,
+        "byte_offset": 49328,
+        "byte_before": 186,
+        "byte_after": 170
+      },
+      "output": {
+        "output_shape": [
+          1,
+          300,
+          6
+        ],
+        "max_abs_diff": 1.52587890625e-05,
+        "mean_abs_diff": 1.1093086449420753e-08,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 404,
+        "global_argmax_after": 404,
+        "global_argmax_changed": false
+      }
+    }
+  ],
+  "summary": {
+    "classification_top1_changed": 0,
+    "global_argmax_changed": 0,
+    "max_abs_diff_max": 627.4237060546875,
+    "max_abs_diff_mean": 78.43108177185059
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "workload_scope": "DIOR 1000/1000/256 prevalidation subset, not full-task thesis result",
+  "fault_sampling": "stratified, 170 runtime nodes x 8 injections",
+  "baseline": {
+    "critical_failures": 36,
+    "failure_modes": {
+      "none": 1324,
+      "task_output_failure": 25,
+      "controlled_execution_error": 11
+    },
+    "latency_avg_ms": 172.0982
+  },
+  "control_dmr": {
+    "critical_failures": 25,
+    "failure_modes": {
+      "none": 1335,
+      "task_output_failure": 25
+    },
+    "latency_avg_ms": 172.9128,
+    "extra_memory_bytes": 48000,
+    "reliability_stats": {
+      "injected_faults": 1360,
+      "detected_faults": 32,
+      "recovered_faults": 32,
+      "unrecovered_faults": 0,
+      "rerun_count": 32
+    }
+  },
+  "critical_failure_reduction": 11,
+  "critical_failure_reduction_ratio": 0.3055555555555556,
+  "latency_overhead_ms": 0.8146000000000129,
+  "latency_overhead_ratio": 0.004733344102378833
+}

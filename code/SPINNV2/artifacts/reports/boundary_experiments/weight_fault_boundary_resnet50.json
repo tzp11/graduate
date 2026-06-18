@@ -1,0 +1,256 @@
+{
+  "generated_at_utc": "2026-05-28T03:17:07.747555+00:00",
+  "scope": "persistent_weight_fault_boundary_proxy",
+  "interpretation": "This experiment documents output sensitivity to persistent ONNX initializer corruption. It is a boundary experiment and is not used as the thesis main transient activation fault model.",
+  "model": "artifacts\\models\\resnet50_eurosat_gpu_prevalidation.onnx",
+  "input_bin": "artifacts\\inputs\\resnet50_eurosat_test_000003.bin",
+  "input_shape": [
+    1,
+    3,
+    224,
+    224
+  ],
+  "seed": 2026,
+  "trials": 8,
+  "bit_index": "random",
+  "events": [
+    {
+      "trial": 0,
+      "fault": {
+        "initializer_name": "onnx::Conv_587",
+        "initializer_index": 62,
+        "initializer_raw_bytes": 1048576,
+        "element_index": 167501,
+        "bit_index": 6,
+        "byte_offset": 670004,
+        "byte_before": 52,
+        "byte_after": 116
+      },
+      "output": {
+        "output_shape": [
+          1,
+          10
+        ],
+        "max_abs_diff": 1.9073486328125e-06,
+        "mean_abs_diff": 6.675720101156912e-07,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 8,
+        "global_argmax_after": 8,
+        "global_argmax_changed": false,
+        "classification_top1_before": 8,
+        "classification_top1_after": 8,
+        "classification_top1_changed": false
+      }
+    },
+    {
+      "trial": 1,
+      "fault": {
+        "initializer_name": "onnx::Conv_617",
+        "initializer_index": 82,
+        "initializer_raw_bytes": 1048576,
+        "element_index": 220523,
+        "bit_index": 31,
+        "byte_offset": 882095,
+        "byte_before": 60,
+        "byte_after": 188
+      },
+      "output": {
+        "output_shape": [
+          1,
+          10
+        ],
+        "max_abs_diff": 0.0014314651489257812,
+        "mean_abs_diff": 0.0006903886678628623,
+        "num_abs_diff_gt_1e_3": 2,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 8,
+        "global_argmax_after": 8,
+        "global_argmax_changed": false,
+        "classification_top1_before": 8,
+        "classification_top1_after": 8,
+        "classification_top1_changed": false
+      }
+    },
+    {
+      "trial": 2,
+      "fault": {
+        "initializer_name": "onnx::Conv_647",
+        "initializer_index": 102,
+        "initializer_raw_bytes": 4194304,
+        "element_index": 925043,
+        "bit_index": 15,
+        "byte_offset": 3700173,
+        "byte_before": 237,
+        "byte_after": 109
+      },
+      "output": {
+        "output_shape": [
+          1,
+          10
+        ],
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 8,
+        "global_argmax_after": 8,
+        "global_argmax_changed": false,
+        "classification_top1_before": 8,
+        "classification_top1_after": 8,
+        "classification_top1_changed": false
+      }
+    },
+    {
+      "trial": 3,
+      "fault": {
+        "initializer_name": "onnx::Conv_506",
+        "initializer_index": 8,
+        "initializer_raw_bytes": 65536,
+        "element_index": 2645,
+        "bit_index": 7,
+        "byte_offset": 10580,
+        "byte_before": 148,
+        "byte_after": 20
+      },
+      "output": {
+        "output_shape": [
+          1,
+          10
+        ],
+        "max_abs_diff": 3.814697265625e-06,
+        "mean_abs_diff": 2.47955313170678e-06,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 8,
+        "global_argmax_after": 8,
+        "global_argmax_changed": false,
+        "classification_top1_before": 8,
+        "classification_top1_after": 8,
+        "classification_top1_changed": false
+      }
+    },
+    {
+      "trial": 4,
+      "fault": {
+        "initializer_name": "onnx::Conv_629",
+        "initializer_index": 90,
+        "initializer_raw_bytes": 9437184,
+        "element_index": 411258,
+        "bit_index": 28,
+        "byte_offset": 1645035,
+        "byte_before": 60,
+        "byte_after": 44
+      },
+      "output": {
+        "output_shape": [
+          1,
+          10
+        ],
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 8,
+        "global_argmax_after": 8,
+        "global_argmax_changed": false,
+        "classification_top1_before": 8,
+        "classification_top1_after": 8,
+        "classification_top1_changed": false
+      }
+    },
+    {
+      "trial": 5,
+      "fault": {
+        "initializer_name": "onnx::Conv_533",
+        "initializer_index": 26,
+        "initializer_raw_bytes": 589824,
+        "element_index": 128525,
+        "bit_index": 20,
+        "byte_offset": 514102,
+        "byte_before": 13,
+        "byte_after": 29
+      },
+      "output": {
+        "output_shape": [
+          1,
+          10
+        ],
+        "max_abs_diff": 0.00011348724365234375,
+        "mean_abs_diff": 5.944967415416613e-05,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 8,
+        "global_argmax_after": 8,
+        "global_argmax_changed": false,
+        "classification_top1_before": 8,
+        "classification_top1_after": 8,
+        "classification_top1_changed": false
+      }
+    },
+    {
+      "trial": 6,
+      "fault": {
+        "initializer_name": "onnx::Conv_611",
+        "initializer_index": 78,
+        "initializer_raw_bytes": 2359296,
+        "element_index": 416512,
+        "bit_index": 16,
+        "byte_offset": 1666050,
+        "byte_before": 146,
+        "byte_after": 147
+      },
+      "output": {
+        "output_shape": [
+          1,
+          10
+        ],
+        "max_abs_diff": 1.9073486328125e-06,
+        "mean_abs_diff": 7.390975724774762e-07,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 8,
+        "global_argmax_after": 8,
+        "global_argmax_changed": false,
+        "classification_top1_before": 8,
+        "classification_top1_after": 8,
+        "classification_top1_changed": false
+      }
+    },
+    {
+      "trial": 7,
+      "fault": {
+        "initializer_name": "onnx::Conv_632",
+        "initializer_index": 92,
+        "initializer_raw_bytes": 4194304,
+        "element_index": 747920,
+        "bit_index": 24,
+        "byte_offset": 2991683,
+        "byte_before": 188,
+        "byte_after": 189
+      },
+      "output": {
+        "output_shape": [
+          1,
+          10
+        ],
+        "max_abs_diff": 0.0,
+        "mean_abs_diff": 0.0,
+        "num_abs_diff_gt_1e_3": 0,
+        "num_abs_diff_gt_1e_2": 0,
+        "global_argmax_before": 8,
+        "global_argmax_after": 8,
+        "global_argmax_changed": false,
+        "classification_top1_before": 8,
+        "classification_top1_after": 8,
+        "classification_top1_changed": false
+      }
+    }
+  ],
+  "summary": {
+    "classification_top1_changed": 0,
+    "global_argmax_changed": 0,
+    "max_abs_diff_max": 0.0014314651489257812,
+    "max_abs_diff_mean": 0.00019407272338867188
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "status": "no_baseline_true_positives_for_task_aware_screening",
+  "candidate_nodes": 170,
+  "eligible_samples": 0,
+  "observations": 0,
+  "critical_failures": 0,
+  "confidence_threshold": 0.25,
+  "output": "artifacts\\reports\\yolov10n_dior_subset_smoke\\runtime_fault_screen.jsonl"
+}

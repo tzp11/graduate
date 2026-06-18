@@ -1,0 +1,710 @@
+{
+  "model_id": "resnet50_eurosat_gpu_prevalidation",
+  "platform_profile": "windows_x64_avx2_release_feedback2_calibrated",
+  "fault_model": {
+    "type": "one_random_fp32_output_bit_flip_per_inference",
+    "runtime_object_prior": "activation_bytes_weighted",
+    "bit_prior": "uniform_all_32_bits",
+    "seed": 2026
+  },
+  "sampling": {
+    "requested_test_prefix": 32,
+    "baseline_correct_samples": 30,
+    "events": 32
+  },
+  "totals": {
+    "events": 32,
+    "unprotected_critical_failures": 0,
+    "protected_critical_failures": 0,
+    "mitigated_critical_failures": 0,
+    "new_protected_failures": 0,
+    "selected_node_events": 16,
+    "selected_node_unprotected_critical_failures": 0,
+    "selected_node_protected_critical_failures": 0,
+    "detected_faults": 8,
+    "recovered_faults": 8,
+    "unrecovered_faults": 0,
+    "rerun_count": 8
+  },
+  "rates": {
+    "unprotected_critical_failure_rate": 0.0,
+    "protected_critical_failure_rate": 0.0,
+    "observed_risk_reduction_ratio": 0.0,
+    "selected_node_event_rate": 0.5,
+    "selected_node_observed_reduction_ratio": 0.0
+  },
+  "observations": [
+    {
+      "sequence": 0,
+      "sample_id": "test_000004",
+      "label": 8,
+      "node_id": 18,
+      "tensor_id": 127,
+      "element_index": 268342,
+      "bit_index": 6,
+      "protection_mode": "range_guard_rerun",
+      "unprotected_class": 8,
+      "protected_class": 8,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 1,
+      "sample_id": "test_000030",
+      "label": 2,
+      "node_id": 5,
+      "tensor_id": 114,
+      "element_index": 630226,
+      "bit_index": 26,
+      "protection_mode": "range_guard_rerun",
+      "unprotected_class": 2,
+      "protected_class": 2,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 2,
+      "sample_id": "test_000027",
+      "label": 3,
+      "node_id": 15,
+      "tensor_id": 124,
+      "element_index": 383012,
+      "bit_index": 31,
+      "protection_mode": "none",
+      "unprotected_class": 3,
+      "protected_class": 3,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 3,
+      "sample_id": "test_000026",
+      "label": 0,
+      "node_id": 35,
+      "tensor_id": 144,
+      "element_index": 115630,
+      "bit_index": 15,
+      "protection_mode": "none",
+      "unprotected_class": 0,
+      "protected_class": 0,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 4,
+      "sample_id": "test_000001",
+      "label": 1,
+      "node_id": 30,
+      "tensor_id": 139,
+      "element_index": 58057,
+      "bit_index": 18,
+      "protection_mode": "dmr_compare_rerun",
+      "unprotected_class": 1,
+      "protected_class": 1,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 1,
+        "recovered_faults": 1,
+        "unrecovered_faults": 0,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sequence": 5,
+      "sample_id": "test_000028",
+      "label": 1,
+      "node_id": 4,
+      "tensor_id": 113,
+      "element_index": 12046,
+      "bit_index": 31,
+      "protection_mode": "range_guard_rerun",
+      "unprotected_class": 1,
+      "protected_class": 1,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 6,
+      "sample_id": "test_000022",
+      "label": 2,
+      "node_id": 18,
+      "tensor_id": 127,
+      "element_index": 208256,
+      "bit_index": 16,
+      "protection_mode": "range_guard_rerun",
+      "unprotected_class": 2,
+      "protected_class": 2,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 7,
+      "sample_id": "test_000012",
+      "label": 2,
+      "node_id": 69,
+      "tensor_id": 178,
+      "element_index": 46745,
+      "bit_index": 24,
+      "protection_mode": "none",
+      "unprotected_class": 2,
+      "protected_class": 2,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 8,
+      "sample_id": "test_000024",
+      "label": 2,
+      "node_id": 56,
+      "tensor_id": 165,
+      "element_index": 20006,
+      "bit_index": 21,
+      "protection_mode": "dmr_compare_rerun",
+      "unprotected_class": 2,
+      "protected_class": 2,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 1,
+        "recovered_faults": 1,
+        "unrecovered_faults": 0,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sequence": 9,
+      "sample_id": "test_000003",
+      "label": 8,
+      "node_id": 14,
+      "tensor_id": 123,
+      "element_index": 306311,
+      "bit_index": 18,
+      "protection_mode": "none",
+      "unprotected_class": 8,
+      "protected_class": 8,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 10,
+      "sample_id": "test_000015",
+      "label": 3,
+      "node_id": 19,
+      "tensor_id": 128,
+      "element_index": 338058,
+      "bit_index": 19,
+      "protection_mode": "dmr_compare_rerun",
+      "unprotected_class": 3,
+      "protected_class": 3,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 1,
+        "recovered_faults": 1,
+        "unrecovered_faults": 0,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sequence": 11,
+      "sample_id": "test_000001",
+      "label": 1,
+      "node_id": 13,
+      "tensor_id": 122,
+      "element_index": 386761,
+      "bit_index": 23,
+      "protection_mode": "none",
+      "unprotected_class": 1,
+      "protected_class": 1,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 12,
+      "sample_id": "test_000015",
+      "label": 3,
+      "node_id": 10,
+      "tensor_id": 119,
+      "element_index": 418144,
+      "bit_index": 31,
+      "protection_mode": "range_guard_rerun",
+      "unprotected_class": 3,
+      "protected_class": 3,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 13,
+      "sample_id": "test_000029",
+      "label": 7,
+      "node_id": 2,
+      "tensor_id": 111,
+      "element_index": 132738,
+      "bit_index": 31,
+      "protection_mode": "dmr_compare_rerun",
+      "unprotected_class": 7,
+      "protected_class": 7,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 1,
+        "recovered_faults": 1,
+        "unrecovered_faults": 0,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sequence": 14,
+      "sample_id": "test_000013",
+      "label": 5,
+      "node_id": 9,
+      "tensor_id": 118,
+      "element_index": 271207,
+      "bit_index": 26,
+      "protection_mode": "none",
+      "unprotected_class": 5,
+      "protected_class": 5,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 15,
+      "sample_id": "test_000019",
+      "label": 7,
+      "node_id": 26,
+      "tensor_id": 135,
+      "element_index": 251233,
+      "bit_index": 1,
+      "protection_mode": "none",
+      "unprotected_class": 7,
+      "protected_class": 7,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 16,
+      "sample_id": "test_000019",
+      "label": 7,
+      "node_id": 5,
+      "tensor_id": 114,
+      "element_index": 135265,
+      "bit_index": 3,
+      "protection_mode": "range_guard_rerun",
+      "unprotected_class": 7,
+      "protected_class": 7,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 17,
+      "sample_id": "test_000023",
+      "label": 0,
+      "node_id": 14,
+      "tensor_id": 123,
+      "element_index": 703052,
+      "bit_index": 6,
+      "protection_mode": "none",
+      "unprotected_class": 0,
+      "protected_class": 0,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 18,
+      "sample_id": "test_000023",
+      "label": 0,
+      "node_id": 7,
+      "tensor_id": 116,
+      "element_index": 123218,
+      "bit_index": 9,
+      "protection_mode": "none",
+      "unprotected_class": 0,
+      "protected_class": 0,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 19,
+      "sample_id": "test_000016",
+      "label": 9,
+      "node_id": 9,
+      "tensor_id": 118,
+      "element_index": 127940,
+      "bit_index": 29,
+      "protection_mode": "none",
+      "unprotected_class": 9,
+      "protected_class": 9,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 20,
+      "sample_id": "test_000022",
+      "label": 2,
+      "node_id": 27,
+      "tensor_id": 136,
+      "element_index": 286068,
+      "bit_index": 16,
+      "protection_mode": "dmr_compare_rerun",
+      "unprotected_class": 2,
+      "protected_class": 2,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 1,
+        "recovered_faults": 1,
+        "unrecovered_faults": 0,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sequence": 21,
+      "sample_id": "test_000018",
+      "label": 2,
+      "node_id": 64,
+      "tensor_id": 173,
+      "element_index": 40321,
+      "bit_index": 30,
+      "protection_mode": "range_guard_rerun",
+      "unprotected_class": 2,
+      "protected_class": 2,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 22,
+      "sample_id": "test_000027",
+      "label": 3,
+      "node_id": 9,
+      "tensor_id": 118,
+      "element_index": 454103,
+      "bit_index": 12,
+      "protection_mode": "none",
+      "unprotected_class": 3,
+      "protected_class": 3,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 23,
+      "sample_id": "test_000010",
+      "label": 2,
+      "node_id": 13,
+      "tensor_id": 122,
+      "element_index": 9727,
+      "bit_index": 2,
+      "protection_mode": "none",
+      "unprotected_class": 2,
+      "protected_class": 2,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 24,
+      "sample_id": "test_000005",
+      "label": 4,
+      "node_id": 52,
+      "tensor_id": 161,
+      "element_index": 156571,
+      "bit_index": 29,
+      "protection_mode": "dmr_compare_rerun",
+      "unprotected_class": 4,
+      "protected_class": 4,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 1,
+        "recovered_faults": 1,
+        "unrecovered_faults": 0,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sequence": 25,
+      "sample_id": "test_000027",
+      "label": 3,
+      "node_id": 14,
+      "tensor_id": 123,
+      "element_index": 513296,
+      "bit_index": 23,
+      "protection_mode": "none",
+      "unprotected_class": 3,
+      "protected_class": 3,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 26,
+      "sample_id": "test_000031",
+      "label": 2,
+      "node_id": 5,
+      "tensor_id": 114,
+      "element_index": 726293,
+      "bit_index": 31,
+      "protection_mode": "range_guard_rerun",
+      "unprotected_class": 2,
+      "protected_class": 2,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 27,
+      "sample_id": "test_000015",
+      "label": 3,
+      "node_id": 56,
+      "tensor_id": 165,
+      "element_index": 130326,
+      "bit_index": 27,
+      "protection_mode": "dmr_compare_rerun",
+      "unprotected_class": 3,
+      "protected_class": 3,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 1,
+        "recovered_faults": 1,
+        "unrecovered_faults": 0,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sequence": 28,
+      "sample_id": "test_000018",
+      "label": 2,
+      "node_id": 43,
+      "tensor_id": 152,
+      "element_index": 8813,
+      "bit_index": 18,
+      "protection_mode": "none",
+      "unprotected_class": 2,
+      "protected_class": 2,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 29,
+      "sample_id": "test_000011",
+      "label": 9,
+      "node_id": 27,
+      "tensor_id": 136,
+      "element_index": 51576,
+      "bit_index": 28,
+      "protection_mode": "dmr_compare_rerun",
+      "unprotected_class": 9,
+      "protected_class": 9,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 1,
+        "recovered_faults": 1,
+        "unrecovered_faults": 0,
+        "rerun_count": 1
+      }
+    },
+    {
+      "sequence": 30,
+      "sample_id": "test_000023",
+      "label": 0,
+      "node_id": 20,
+      "tensor_id": 129,
+      "element_index": 67524,
+      "bit_index": 16,
+      "protection_mode": "none",
+      "unprotected_class": 0,
+      "protected_class": 0,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    },
+    {
+      "sequence": 31,
+      "sample_id": "test_000015",
+      "label": 3,
+      "node_id": 26,
+      "tensor_id": 135,
+      "element_index": 95970,
+      "bit_index": 27,
+      "protection_mode": "none",
+      "unprotected_class": 3,
+      "protected_class": 3,
+      "unprotected_critical_failure": false,
+      "protected_critical_failure": false,
+      "stats": {
+        "injected_faults": 1,
+        "detected_faults": 0,
+        "recovered_faults": 0,
+        "unrecovered_faults": 0,
+        "rerun_count": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "runtime_backend": "windows_x64_avx2_release_feedback2_calibrated",
+  "clean_evaluation": {
+    "samples": 512,
+    "baseline_accuracy": 0.97265625,
+    "protected_accuracy": 0.97265625,
+    "prediction_agreement": 1.0,
+    "false_alarm_rate": 0.00390625,
+    "baseline_latency_ms": 109.89118769975903,
+    "protected_latency_ms": 129.42539665527875,
+    "latency_overhead_ms": 19.534208955519716,
+    "latency_overhead_ratio": 0.17775955801743093
+  },
+  "fault_evaluation": {
+    "events": 1024,
+    "unprotected_critical_failures": 16,
+    "protected_critical_failures": 4,
+    "unprotected_failure_rate": 0.015625,
+    "unprotected_failure_rate_wilson95": [
+      0.009640242424765594,
+      0.02523050030446428
+    ],
+    "protected_failure_rate": 0.00390625,
+    "protected_failure_rate_wilson95": [
+      0.0015200565834699161,
+      0.010000784760176809
+    ],
+    "observed_reduction_ratio": 0.75,
+    "paired_bootstrap_reduction_ratio_95": [
+      0.5,
+      0.9473684210526315
+    ],
+    "detected_faults": 323,
+    "recovered_faults": 309
+  },
+  "budget_optimization": {
+    "latency_budget_ms": 20.0,
+    "extra_memory_budget_bytes": 4194304,
+    "predicted_risk_reduction_ratio": 0.6614106131613992,
+    "selected_count": 30,
+    "used_peak_extra_memory_bytes": 3211264
+  }
+}

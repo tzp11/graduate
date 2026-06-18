@@ -1,0 +1,9 @@
+{
+  "candidate_count": 103,
+  "retained_after_passes": 70,
+  "top_candidate": "layer1.0.relu@2",
+  "top_risk": 0.11194566963533835,
+  "top_critical_probability": 0.125,
+  "top_runtime_node_id": 3,
+  "top_runtime_tensor_id": 112
+}

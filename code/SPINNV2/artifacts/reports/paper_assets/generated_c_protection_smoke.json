@@ -1,0 +1,30 @@
+{
+  "generated_at_utc": "2026-05-28T07:56:42.0690502Z",
+  "status": "passed",
+  "codegen_mode": "external_spk_asset_default",
+  "fix_summary": "Generated C no longer expands large SPK packages into giant C byte arrays by default. It copies the SPK as a binary asset, compiles a small wrapper, verifies the file checksum, and loads it through spkv2_load_file.",
+  "reason_for_previous_failure": "The old codegen emitted a 94MB ResNet50 SPK as a 603MB C initializer. MSVC exhausted compiler heap while compiling that single source file and reported C1060.",
+  "resnet50": {
+    "protected_spk": "artifacts/spk/resnet50_eurosat_gpu_prevalidation_avx2_feedback2_ilp_20ms_4mib_runtime_calibrated_val512.spk",
+    "generated_dir": "artifacts/generated/resnet50_protected_smoke",
+    "c_source_bytes": 3208,
+    "spk_asset_bytes": 94053668,
+    "executable": "build/generated/resnet50_protected_smoke/Release/resnet50_protected_main_test.exe",
+    "input": "artifacts/inputs/resnet50_eurosat_test_000003.bin",
+    "output": "artifacts/outputs/resnet50_generated_protected_smoke.bin",
+    "output_bytes": 40,
+    "status": "passed"
+  },
+  "yolov10n": {
+    "protected_spk": "artifacts/spk/yolov10n_dior_full_e30_b16_ilp_dmr_20pct_4mb_runtime_calibrated_cpu_generic.spk",
+    "generated_dir": "artifacts/generated/yolov10n_protected_smoke",
+    "c_source_bytes": 3208,
+    "spk_asset_bytes": 9343228,
+    "executable": "build/generated/yolov10n_protected_smoke/Release/yolov10n_protected_main_test.exe",
+    "input": "artifacts/inputs/yolov10n_dior_full_test_00000001.bin",
+    "output": "artifacts/outputs/yolov10n_generated_protected_smoke.bin",
+    "output_bytes": 7200,
+    "status": "passed"
+  },
+  "limitation": "Generated wrappers still do not expose fault event controls or reliability stats; batch fault-injection evaluation remains on runtime CLI/ctypes."
+}

@@ -1,0 +1,234 @@
+{
+  "generated_at_utc": "2026-05-28T10:36:08.887658+00:00",
+  "script": "research/reliability/export_paper_assets.py",
+  "repo_root": "E:\\work\\graduatepaper\\code\\SPINNV2",
+  "assets": [
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch2_related_work_comparison.md",
+      "status": "generated"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/contribution_claims.md",
+      "status": "generated"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/current_windows_status_summary.md",
+      "status": "generated"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/thesis_chapter_mapping.md",
+      "status": "generated"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch4_budget_risk_curve_resnet50.png",
+      "source": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/resnet50_windows_avx2_release/feedback2_calibrated/resnet50_budget_pareto.png",
+      "status": "copied"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch5_resnet50_runtime_fault_mitigation.png",
+      "source": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/resnet50_windows_avx2_release/feedback2_calibrated/resnet50_runtime_fault_mitigation.png",
+      "status": "copied"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch5_resnet50_latency_overhead.png",
+      "source": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/resnet50_windows_avx2_release/feedback2_calibrated/resnet50_runtime_latency_overhead.png",
+      "status": "copied"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch5_yolov10n_fault_recovery_case.png",
+      "source": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/yolov10n_dior_full_e30_b16/figures/yolov10n_fault_recovery_case.png",
+      "status": "copied"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/spk_integrity_boundary.json",
+      "source": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/boundary_experiments/spk_integrity_boundary.json",
+      "status": "copied"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/weight_fault_boundary_resnet50.json",
+      "source": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/boundary_experiments/weight_fault_boundary_resnet50.json",
+      "status": "copied"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/weight_fault_boundary_yolov10n.json",
+      "source": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/boundary_experiments/weight_fault_boundary_yolov10n.json",
+      "status": "copied"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/engineering_metrics.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/engineering_metrics.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/generated_c_gap_report.md",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/generated_c_protection_smoke.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/baseline_comparison.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/baseline_comparison.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_score_ablation.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_score_ablation.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/resnet50_bounded_loss_memory_comparison.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/resnet50_bounded_loss_memory_comparison.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/resnet50_bounded_loss_memory_saving.png",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_stability_resnet50.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_stability_resnet50.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_stability_yolov10n.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_stability_yolov10n.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_stability_resnet50_formal.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_stability_resnet50_formal.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_stability_yolov10n_formal.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/risk_stability_yolov10n_formal.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/yolov10n_grouped_protection_comparison.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/formal_windows_completion_summary.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/formal_windows_completion_summary.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/formal_windows_completion_summary.md",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch3_risk_rank_resnet50.png",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch3_risk_rank_yolov10n.png",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch3_risk_stability_resnet50.png",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch3_risk_stability_yolov10n.png",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch5_resnet50_method_comparison.png",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch5_yolov10n_method_comparison.png",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch5_yolov10n_grouped_protection.png",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/ch5_formal_windows_completion_summary.png",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/adaptive_quantile_range_guard.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/adaptive_quantile_range_guard.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/adaptive_quantile_range_guard_measured.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/adaptive_quantile_range_guard_measured.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/confidence_robust_bounded_loss_ilp.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/confidence_robust_bounded_loss_ilp.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/dmr_guard_gated_comparison.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/dmr_guard_gated_comparison.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/screening_decision_summary.md",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/task_utility_guard_yolov10n.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/task_utility_guard_yolov10n.json",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/task_utility_guard_yolov10n_measured.csv",
+      "status": "generated_or_existing"
+    },
+    {
+      "asset": "E:/work/graduatepaper/code/SPINNV2/artifacts/reports/paper_assets/mechanism_improvement_screening/task_utility_guard_yolov10n_measured.json",
+      "status": "generated_or_existing"
+    }
+  ]
+}

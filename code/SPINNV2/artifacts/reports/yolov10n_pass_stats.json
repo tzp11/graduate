@@ -1,0 +1,58 @@
+[
+  {
+    "name": "EliminateIdentityDropout",
+    "changed": 0,
+    "nodes_before": 308,
+    "nodes_after": 308,
+    "tensors_before": 514,
+    "tensors_after": 514
+  },
+  {
+    "name": "ConstantFold",
+    "changed": 0,
+    "nodes_before": 308,
+    "nodes_after": 308,
+    "tensors_before": 514,
+    "tensors_after": 514
+  },
+  {
+    "name": "FuseConvBatchNorm",
+    "changed": 0,
+    "nodes_before": 308,
+    "nodes_after": 308,
+    "tensors_before": 514,
+    "tensors_after": 514
+  },
+  {
+    "name": "FuseConvRelu",
+    "changed": 0,
+    "nodes_before": 308,
+    "nodes_after": 308,
+    "tensors_before": 514,
+    "tensors_after": 514
+  },
+  {
+    "name": "FuseConvSilu",
+    "changed": 69,
+    "nodes_before": 308,
+    "nodes_after": 170,
+    "tensors_before": 514,
+    "tensors_after": 376
+  },
+  {
+    "name": "FuseAddRelu",
+    "changed": 0,
+    "nodes_before": 170,
+    "nodes_after": 170,
+    "tensors_before": 376,
+    "tensors_after": 376
+  },
+  {
+    "name": "EliminateDead",
+    "changed": 0,
+    "nodes_before": 170,
+    "nodes_after": 170,
+    "tensors_before": 376,
+    "tensors_after": 376
+  }
+]

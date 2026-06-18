@@ -1,0 +1,186 @@
+{
+  "model_id": "resnet50_eurosat_gpu_prevalidation",
+  "sample_id": "test_000003",
+  "fault_event": {
+    "node_id": 3,
+    "tensor_id": 112,
+    "element_index": 170011,
+    "bit_index": 28,
+    "invocation_index": 1
+  },
+  "clean_protected": {
+    "predicted_class": 8,
+    "max_abs_vs_unprotected_reference": 0.0,
+    "stats": {
+      "injected_faults": 0,
+      "detected_faults": 0,
+      "recovered_faults": 0,
+      "unrecovered_faults": 0,
+      "rerun_count": 0
+    },
+    "range_observations": [
+      {
+        "node_id": 3,
+        "tensor_id": 112,
+        "observed_min": 0.0,
+        "observed_max": 22.523324966430664,
+        "observations": 1,
+        "configured_lower_bound": -2.546707220077515,
+        "configured_upper_bound": 26.801061697006226,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 0,
+        "tensor_id": 109,
+        "observed_min": 0.0,
+        "observed_max": 32.45092010498047,
+        "observations": 1,
+        "configured_lower_bound": -3.5597428894042973,
+        "configured_upper_bound": 37.46205612182617,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 4,
+        "tensor_id": 113,
+        "observed_min": -17.243398666381836,
+        "observed_max": 15.889439582824707,
+        "observations": 1,
+        "configured_lower_bound": -23.307968549728393,
+        "configured_upper_bound": 19.76325457572937,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 2,
+        "tensor_id": 111,
+        "observed_min": 0.0,
+        "observed_max": 16.622936248779297,
+        "observations": 1,
+        "configured_lower_bound": -1.8549708938598637,
+        "configured_upper_bound": 19.521360359191895,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 25,
+        "tensor_id": 134,
+        "observed_min": 0.0,
+        "observed_max": 9.026388168334961,
+        "observations": 1,
+        "configured_lower_bound": -1.3038626861572267,
+        "configured_upper_bound": 13.721602554321288,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 8,
+        "tensor_id": 117,
+        "observed_min": 0.0,
+        "observed_max": 20.323217391967773,
+        "observations": 1,
+        "configured_lower_bound": -2.1601335525512697,
+        "configured_upper_bound": 22.73283405303955,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 34,
+        "tensor_id": 143,
+        "observed_min": -11.677447319030762,
+        "observed_max": 11.13106918334961,
+        "observations": 1,
+        "configured_lower_bound": -12.81787314414978,
+        "configured_upper_bound": 12.271495008468628,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 5,
+        "tensor_id": 114,
+        "observed_min": -33.35984420776367,
+        "observed_max": 17.9271183013916,
+        "observations": 1,
+        "configured_lower_bound": -93.19858882904052,
+        "configured_upper_bound": 51.91192958831787,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 6,
+        "tensor_id": 115,
+        "observed_min": 0.0,
+        "observed_max": 10.115625381469727,
+        "observations": 1,
+        "configured_lower_bound": -1.2411065769195557,
+        "configured_upper_bound": 13.061169214248656,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 18,
+        "tensor_id": 127,
+        "observed_min": -11.801678657531738,
+        "observed_max": 10.315411567687988,
+        "observations": 1,
+        "configured_lower_bound": -19.53294617652893,
+        "configured_upper_bound": 20.064285821914673,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 22,
+        "tensor_id": 131,
+        "observed_min": -17.8397216796875,
+        "observed_max": 8.07125473022461,
+        "observations": 1,
+        "configured_lower_bound": -19.135270500183104,
+        "configured_upper_bound": 9.366803550720215,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 17,
+        "tensor_id": 126,
+        "observed_min": -13.673861503601074,
+        "observed_max": 11.965709686279297,
+        "observations": 1,
+        "configured_lower_bound": -15.048282356262208,
+        "configured_upper_bound": 15.188976402282716,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 16,
+        "tensor_id": 125,
+        "observed_min": 0.0,
+        "observed_max": 10.733216285705566,
+        "observations": 1,
+        "configured_lower_bound": -1.147602367401123,
+        "configured_upper_bound": 12.077148723602296,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 64,
+        "tensor_id": 173,
+        "observed_min": -12.531862258911133,
+        "observed_max": 6.592958450317383,
+        "observations": 1,
+        "configured_lower_bound": -23.27418697357178,
+        "configured_upper_bound": 26.288316612243655,
+        "outside_configured_bounds": false
+      },
+      {
+        "node_id": 10,
+        "tensor_id": 119,
+        "observed_min": 0.0,
+        "observed_max": 14.437592506408691,
+        "observations": 1,
+        "configured_lower_bound": -1.7886225128173827,
+        "configured_upper_bound": 18.823122634887692,
+        "outside_configured_bounds": false
+      }
+    ],
+    "range_violation_node_ids": []
+  },
+  "faulted_protected": {
+    "predicted_class": 8,
+    "max_abs_vs_unprotected_reference": 0.0,
+    "stats": {
+      "injected_faults": 1,
+      "detected_faults": 1,
+      "recovered_faults": 1,
+      "unrecovered_faults": 0,
+      "rerun_count": 1
+    }
+  }
+}

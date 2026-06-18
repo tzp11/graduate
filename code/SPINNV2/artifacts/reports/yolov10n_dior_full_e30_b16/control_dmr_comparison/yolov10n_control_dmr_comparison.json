@@ -1,0 +1,33 @@
+{
+  "workload_scope": "DIOR full 18000/2000/3463 formal workload",
+  "fault_sampling": "stratified, 170 runtime nodes x 16 injections",
+  "baseline": {
+    "critical_failures": 77,
+    "failure_modes": {
+      "none": 2643,
+      "task_output_failure": 65,
+      "controlled_execution_error": 12
+    },
+    "latency_avg_ms": 167.7848
+  },
+  "control_dmr": {
+    "critical_failures": 65,
+    "failure_modes": {
+      "none": 2655,
+      "task_output_failure": 65
+    },
+    "latency_avg_ms": 169.0063,
+    "extra_memory_bytes": 48000,
+    "reliability_stats": {
+      "injected_faults": 2720,
+      "detected_faults": 80,
+      "recovered_faults": 80,
+      "unrecovered_faults": 0,
+      "rerun_count": 80
+    }
+  },
+  "critical_failure_reduction": 12,
+  "critical_failure_reduction_ratio": 0.15584415584415584,
+  "latency_overhead_ms": 1.2215000000000202,
+  "latency_overhead_ratio": 0.007280158870171913
+}

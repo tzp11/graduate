@@ -1,0 +1,67 @@
+{
+  "summary": {
+    "mechanism": "adaptive_quantile_range_guard",
+    "evidence": "E:\\work\\graduatepaper\\code\\SPINNV2\\artifacts\\reports\\paper_assets\\mechanism_improvement_screening\\adaptive_quantile_range_guard_measured.json",
+    "policies_evaluated": 4,
+    "best_policy": "minmax",
+    "best_critical_coverage": 0.0,
+    "best_false_positive_rate": 0.0,
+    "best_coverage_gain_vs_minmax": 0.0,
+    "decision": "reject",
+    "reason": "no verified coverage gain under the false-positive constraint"
+  },
+  "rows": [
+    {
+      "policy": "minmax",
+      "critical_faults": 7,
+      "detected_critical_faults": 0,
+      "critical_coverage": 0.0,
+      "false_positive_samples": 0,
+      "clean_holdout_samples": 16384,
+      "false_positive_rate": 0.0,
+      "coverage_gain_vs_minmax": 0.0,
+      "decision": "reject",
+      "reason": "no verified coverage gain under the false-positive constraint",
+      "status": "measured"
+    },
+    {
+      "policy": "q99",
+      "critical_faults": 7,
+      "detected_critical_faults": 0,
+      "critical_coverage": 0.0,
+      "false_positive_samples": 0,
+      "clean_holdout_samples": 16384,
+      "false_positive_rate": 0.0,
+      "coverage_gain_vs_minmax": 0.0,
+      "decision": "reject",
+      "reason": "no verified coverage gain under the false-positive constraint",
+      "status": "measured"
+    },
+    {
+      "policy": "q99.5",
+      "critical_faults": 7,
+      "detected_critical_faults": 0,
+      "critical_coverage": 0.0,
+      "false_positive_samples": 0,
+      "clean_holdout_samples": 16384,
+      "false_positive_rate": 0.0,
+      "coverage_gain_vs_minmax": 0.0,
+      "decision": "reject",
+      "reason": "no verified coverage gain under the false-positive constraint",
+      "status": "measured"
+    },
+    {
+      "policy": "q99.9",
+      "critical_faults": 7,
+      "detected_critical_faults": 0,
+      "critical_coverage": 0.0,
+      "false_positive_samples": 0,
+      "clean_holdout_samples": 16384,
+      "false_positive_rate": 0.0,
+      "coverage_gain_vs_minmax": 0.0,
+      "decision": "reject",
+      "reason": "no verified coverage gain under the false-positive constraint",
+      "status": "measured"
+    }
+  ]
+}

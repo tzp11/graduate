@@ -1,0 +1,11 @@
+{
+  "workload_scope": "DIOR 1000/1000/256 prevalidation subset, not full-task thesis result",
+  "observations": 1024,
+  "eligible_samples": 32,
+  "critical_failures": 32,
+  "critical_failure_rate": 0.03125,
+  "sampled_nodes": 140,
+  "highest_risk_node": 36,
+  "highest_risk_score": 0.9001543898585161,
+  "highest_node_critical_probability": 1.0
+}

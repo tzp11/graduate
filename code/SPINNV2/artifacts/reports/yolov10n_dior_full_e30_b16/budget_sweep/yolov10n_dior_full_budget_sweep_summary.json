@@ -1,0 +1,460 @@
+{
+  "objective": "minimize expected critical detection-failure probability under activation-byte-weighted runtime-object prior",
+  "baseline_expected_critical_failure_probability": 0.024440665791713955,
+  "representative_budget": {
+    "latency_overhead_ms": 32.0,
+    "peak_extra_memory_bytes": 4194304
+  },
+  "representative_results": [
+    {
+      "latency_budget_ms": 32.0,
+      "peak_memory_budget_bytes": 4194304,
+      "method": "ilp",
+      "selected_count": 40,
+      "risk_reduction": 0.01195485421396141,
+      "risk_reduction_std": 0.0,
+      "residual_failure_probability": 0.012485811577752545,
+      "mitigation_ratio": 0.4891378293800175,
+      "used_latency_ms": 31.25636826377213,
+      "used_peak_extra_memory_bytes": 3276800
+    },
+    {
+      "latency_budget_ms": 32.0,
+      "peak_memory_budget_bytes": 4194304,
+      "method": "greedy",
+      "selected_count": 40,
+      "risk_reduction": 0.011954854213961407,
+      "risk_reduction_std": 0.0,
+      "residual_failure_probability": 0.012485811577752548,
+      "mitigation_ratio": 0.4891378293800173,
+      "used_latency_ms": 31.256368263772128,
+      "used_peak_extra_memory_bytes": 3276800
+    },
+    {
+      "latency_budget_ms": 32.0,
+      "peak_memory_budget_bytes": 4194304,
+      "method": "topk_dmr_compare_rerun",
+      "selected_count": 40,
+      "risk_reduction": 0.011954854213961407,
+      "risk_reduction_std": 0.0,
+      "residual_failure_probability": 0.012485811577752548,
+      "mitigation_ratio": 0.4891378293800173,
+      "used_latency_ms": 31.25636826377213,
+      "used_peak_extra_memory_bytes": 3276800
+    },
+    {
+      "latency_budget_ms": 32.0,
+      "peak_memory_budget_bytes": 4194304,
+      "method": "random_dmr_mean",
+      "selected_count": 40,
+      "risk_reduction": 0.011515862951664773,
+      "risk_reduction_std": 0.00041449182312354444,
+      "residual_failure_probability": 0.012924802840049182,
+      "mitigation_ratio": 0.4711763194097994,
+      "used_latency_ms": 31.63651001491499,
+      "used_peak_extra_memory_bytes": 3276800
+    }
+  ],
+  "ilp_selected_modes": [
+    {
+      "node_id": 44,
+      "tensor_id": 240,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.0005675368898978433,
+      "latency_overhead_ms": 1.228192033244898,
+      "extra_memory_bytes": 409600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 157,
+      "tensor_id": 362,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 4.433881952326901e-05,
+      "latency_overhead_ms": 0.23364249945450194,
+      "extra_memory_bytes": 48000,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 167,
+      "tensor_id": 373,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 6.650822928490352e-06,
+      "latency_overhead_ms": 0.04660311692000957,
+      "extra_memory_bytes": 9600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 138,
+      "tensor_id": 341,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 4.433881952326901e-05,
+      "latency_overhead_ms": 0.018700242177207116,
+      "extra_memory_bytes": 64000,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 4,
+      "tensor_id": 197,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.001513431706394249,
+      "latency_overhead_ms": 5.291128045897959,
+      "extra_memory_bytes": 3276800,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 58,
+      "tensor_id": 257,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.001182368520620507,
+      "latency_overhead_ms": 0.5004538649642858,
+      "extra_memory_bytes": 2560000,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 102,
+      "tensor_id": 304,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.0007567158531971245,
+      "latency_overhead_ms": 0.8763056158571428,
+      "extra_memory_bytes": 1638400,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 25,
+      "tensor_id": 220,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00037835792659856227,
+      "latency_overhead_ms": 1.4674077970408164,
+      "extra_memory_bytes": 819200,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 42,
+      "tensor_id": 238,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00018917896329928113,
+      "latency_overhead_ms": 1.239030033244898,
+      "extra_memory_bytes": 409600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 43,
+      "tensor_id": 239,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00018917896329928113,
+      "latency_overhead_ms": 1.240223033244898,
+      "extra_memory_bytes": 409600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 66,
+      "tensor_id": 265,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00018917896329928113,
+      "latency_overhead_ms": 0.02986903324489796,
+      "extra_memory_bytes": 409600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 156,
+      "tensor_id": 361,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 1.1084704880817253e-06,
+      "latency_overhead_ms": 0.00037148269479224817,
+      "extra_memory_bytes": 2400,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 165,
+      "tensor_id": 371,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 1.1084704880817253e-06,
+      "latency_overhead_ms": 0.001010482694792248,
+      "extra_memory_bytes": 2400,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 116,
+      "tensor_id": 319,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00037835792659856227,
+      "latency_overhead_ms": 0.24117779704081632,
+      "extra_memory_bytes": 819200,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 142,
+      "tensor_id": 345,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.0006207434733257662,
+      "latency_overhead_ms": 0.11425234209821428,
+      "extra_memory_bytes": 1344000,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 98,
+      "tensor_id": 301,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00037835792659856227,
+      "latency_overhead_ms": 1.6560617970408162,
+      "extra_memory_bytes": 819200,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 69,
+      "tensor_id": 268,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.0007567158531971245,
+      "latency_overhead_ms": 1.9200740458979593,
+      "extra_memory_bytes": 3276800,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 87,
+      "tensor_id": 288,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.0007567158531971245,
+      "latency_overhead_ms": 1.5932890458979592,
+      "extra_memory_bytes": 3276800,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 12,
+      "tensor_id": 206,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00037835792659856227,
+      "latency_overhead_ms": 2.735251615857143,
+      "extra_memory_bytes": 1638400,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 17,
+      "tensor_id": 211,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00037835792659856227,
+      "latency_overhead_ms": 0.16936661585714285,
+      "extra_memory_bytes": 1638400,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 21,
+      "tensor_id": 215,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00037835792659856227,
+      "latency_overhead_ms": 2.291420615857143,
+      "extra_memory_bytes": 1638400,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 82,
+      "tensor_id": 283,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00037835792659856227,
+      "latency_overhead_ms": 2.336951615857143,
+      "extra_memory_bytes": 1638400,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 33,
+      "tensor_id": 228,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00018917896329928113,
+      "latency_overhead_ms": 1.1850007970408163,
+      "extra_memory_bytes": 819200,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 46,
+      "tensor_id": 242,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00018917896329928113,
+      "latency_overhead_ms": 0.9548617970408163,
+      "extra_memory_bytes": 819200,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 47,
+      "tensor_id": 243,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00018917896329928113,
+      "latency_overhead_ms": 0.5266387970408164,
+      "extra_memory_bytes": 819200,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 96,
+      "tensor_id": 298,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00018917896329928113,
+      "latency_overhead_ms": 1.8857077970408163,
+      "extra_memory_bytes": 819200,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 67,
+      "tensor_id": 266,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00018917896329928113,
+      "latency_overhead_ms": 0.06476979704081633,
+      "extra_memory_bytes": 819200,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 64,
+      "tensor_id": 263,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.00018917896329928113,
+      "latency_overhead_ms": 0.3298697970408163,
+      "extra_memory_bytes": 819200,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 41,
+      "tensor_id": 237,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 9.458948164964057e-05,
+      "latency_overhead_ms": 0.27563003324489793,
+      "extra_memory_bytes": 409600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 115,
+      "tensor_id": 318,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 9.458948164964057e-05,
+      "latency_overhead_ms": 0.19530703324489795,
+      "extra_memory_bytes": 409600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 60,
+      "tensor_id": 259,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 9.458948164964057e-05,
+      "latency_overhead_ms": 0.02576103324489796,
+      "extra_memory_bytes": 409600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 63,
+      "tensor_id": 262,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 9.458948164964057e-05,
+      "latency_overhead_ms": 0.036323033244897954,
+      "extra_memory_bytes": 409600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 55,
+      "tensor_id": 254,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 9.458948164964057e-05,
+      "latency_overhead_ms": 0.16863103324489795,
+      "extra_memory_bytes": 409600,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 155,
+      "tensor_id": 360,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 5.542352440408626e-07,
+      "latency_overhead_ms": 0.012171482694792249,
+      "extra_memory_bytes": 2400,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 151,
+      "tensor_id": 354,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.0003724460839954597,
+      "latency_overhead_ms": 0.14077935893750002,
+      "extra_memory_bytes": 1612800,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 150,
+      "tensor_id": 353,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 0.0003724460839954597,
+      "latency_overhead_ms": 0.12426435893750001,
+      "extra_memory_bytes": 1612800,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 118,
+      "tensor_id": 320,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 5.911842603102535e-05,
+      "latency_overhead_ms": 0.06997930888775511,
+      "extra_memory_bytes": 256000,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 119,
+      "tensor_id": 321,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 5.911842603102535e-05,
+      "latency_overhead_ms": 0.014656308887755104,
+      "extra_memory_bytes": 256000,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 164,
+      "tensor_id": 370,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 5.542352440408626e-07,
+      "latency_overhead_ms": 0.011633482694792249,
+      "extra_memory_bytes": 2400,
+      "lower_bound": null,
+      "upper_bound": null
+    },
+    {
+      "node_id": 140,
+      "tensor_id": 343,
+      "mode": "dmr_compare_rerun",
+      "risk_reduction": 1.4779606507756338e-05,
+      "latency_overhead_ms": 0.0036002421772071145,
+      "extra_memory_bytes": 64000,
+      "lower_bound": null,
+      "upper_bound": null
+    }
+  ]
+}

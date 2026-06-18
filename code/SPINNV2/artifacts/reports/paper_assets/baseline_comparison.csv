@@ -1,0 +1,15 @@
+model,comparison_type,method,selected_count,mitigation_ratio,risk_reduction,residual_failure_probability,used_latency_ms,used_peak_extra_memory_bytes,critical_failures,latency_avg_ms,extra_memory_bytes
+resnet50_eurosat,predicted_budget_selection,ilp,30,0.6614106131613992,0.0183974559810778,0.009418027494674,19.801838040807368,3211264.0,,,
+resnet50_eurosat,predicted_budget_selection,greedy,34,0.6343298154996558,0.0176441905012074,0.0101712929745444,19.608066326105387,3211264.0,,,
+resnet50_eurosat,predicted_budget_selection,topk_range_guard_rerun,20,0.4887220125327352,0.0135940390638405,0.0142214444119114,10.27752073306791,0.0,,,
+resnet50_eurosat,predicted_budget_selection,topk_dmr_compare_rerun,15,0.3470405697256623,0.0096531012326197,0.0181623822431322,19.93603078207423,3211264.0,,,
+resnet50_eurosat,predicted_budget_selection,random_dmr_mean,14,0.1072665882969912,0.0029836720142752,0.0248318114614767,19.91859913981604,3211264.0,,,
+yolov10n_dior_full_e30_b16,predicted_budget_selection,ilp,40,0.4891378293800175,0.0119548542139614,0.0124858115777525,31.25636826377213,3276800.0,,,
+yolov10n_dior_full_e30_b16,predicted_budget_selection,greedy,40,0.4891378293800173,0.0119548542139614,0.0124858115777525,31.256368263772128,3276800.0,,,
+yolov10n_dior_full_e30_b16,predicted_budget_selection,topk_dmr_compare_rerun,40,0.4891378293800173,0.0119548542139614,0.0124858115777525,31.25636826377213,3276800.0,,,
+yolov10n_dior_full_e30_b16,predicted_budget_selection,random_dmr_mean,40,0.4711763194097994,0.0115158629516647,0.0129248028400491,31.63651001491499,3276800.0,,,
+yolov10n_dior_full_e30_b16,same_event_runtime_activation_prior,no_protection,0,0.0,,,,,56.0,167.7848,0.0
+yolov10n_dior_full_e30_b16,same_event_runtime_activation_prior,ilp_dmr_runtime_calibrated,40,0.23214285714285715,,,,,43.0,198.0945,3276800.0
+yolov10n_dior_full_e30_b16,same_event_runtime_stratified,no_protection,0,0.0,,,,,77.0,167.7848,0.0
+yolov10n_dior_full_e30_b16,same_event_runtime_stratified,ilp_dmr_runtime_calibrated,40,0.8311688311688312,,,,,13.0,198.0945,3276800.0
+yolov10n_dior_full_e30_b16,same_event_runtime_control_path,control_path_dmr,5,0.15584415584415584,,,,,65.0,169.0063,48000.0

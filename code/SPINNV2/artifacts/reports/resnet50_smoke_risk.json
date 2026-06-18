@@ -1,0 +1,54 @@
+[
+  {
+    "node_id": 1,
+    "tensor_id": 1,
+    "injections": 24,
+    "critical_failures": 3,
+    "critical_probability": 0.125,
+    "ci_low": 0.04344255039315584,
+    "ci_high": 0.3100428814785757,
+    "mean_severity": 0.10826452039838895,
+    "activation_bytes": 3211264,
+    "exposure_ratio": 0.4,
+    "risk": 0.14831613009959727
+  },
+  {
+    "node_id": 3,
+    "tensor_id": 3,
+    "injections": 24,
+    "critical_failures": 1,
+    "critical_probability": 0.041666666666666664,
+    "ci_low": 0.007393265354805112,
+    "ci_high": 0.20242226248842232,
+    "mean_severity": 0.04168278657064924,
+    "activation_bytes": 802816,
+    "exposure_ratio": 0.1,
+    "risk": 0.04750402997599565
+  },
+  {
+    "node_id": 0,
+    "tensor_id": 0,
+    "injections": 24,
+    "critical_failures": 0,
+    "critical_probability": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.13798057582897535,
+    "mean_severity": 1.5154916596114842e-05,
+    "activation_bytes": 3211264,
+    "exposure_ratio": 0.4,
+    "risk": 0.04000378872914904
+  },
+  {
+    "node_id": 2,
+    "tensor_id": 2,
+    "injections": 24,
+    "critical_failures": 0,
+    "critical_probability": 0.0,
+    "ci_low": 0.0,
+    "ci_high": 0.13798057582897535,
+    "mean_severity": 1.2258275772138866e-05,
+    "activation_bytes": 802816,
+    "exposure_ratio": 0.1,
+    "risk": 0.010003064568943038
+  }
+]

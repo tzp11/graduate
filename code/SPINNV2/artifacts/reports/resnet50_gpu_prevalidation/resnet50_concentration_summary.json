@@ -1,0 +1,32 @@
+{
+  "semantic_candidates": {
+    "scope": "semantic_candidates",
+    "candidate_count": 103,
+    "critical_failures": 267,
+    "gini_critical_failures": 0.5012181375222718,
+    "task_risk_auc": 0.750609068761136,
+    "exposure_proxy_auc": 0.6127231737027742,
+    "top_10_percent_coverage": 0.3408239700374532,
+    "top_20_percent_coverage": 0.5131086142322098,
+    "top_25_percent_coverage": 0.5880149812734082,
+    "candidates_for_50_percent_coverage": 21,
+    "fraction_for_50_percent_coverage": 0.20388349514563106,
+    "candidates_for_80_percent_coverage": 46,
+    "fraction_for_80_percent_coverage": 0.44660194174757284
+  },
+  "runtime_protectable": {
+    "scope": "runtime_protectable",
+    "candidate_count": 70,
+    "critical_failures": 176,
+    "gini_critical_failures": 0.5186688311688312,
+    "task_risk_auc": 0.7593344155844156,
+    "exposure_proxy_auc": 0.6586850649350651,
+    "top_10_percent_coverage": 0.3409090909090909,
+    "top_20_percent_coverage": 0.5170454545454546,
+    "top_25_percent_coverage": 0.6079545454545454,
+    "candidates_for_50_percent_coverage": 14,
+    "fraction_for_50_percent_coverage": 0.2,
+    "candidates_for_80_percent_coverage": 31,
+    "fraction_for_80_percent_coverage": 0.44285714285714284
+  }
+}

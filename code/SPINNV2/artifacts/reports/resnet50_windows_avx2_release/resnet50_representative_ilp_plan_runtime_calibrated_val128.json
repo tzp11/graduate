@@ -1,0 +1,399 @@
+{
+  "version": 1,
+  "model_id": "resnet50_eurosat_gpu_prevalidation",
+  "platform_profile": "windows_x64_avx2_release",
+  "fault_prior": "activation_bytes_weighted_single_bit",
+  "budgets": {
+    "latency_overhead_ms": 20.0,
+    "extra_memory_bytes": 4194304
+  },
+  "optimizer": {
+    "method": "ilp",
+    "predicted_risk_reduction": 0.019302432812569582
+  },
+  "nodes": [
+    {
+      "node_id": 3,
+      "tensor_id": 112,
+      "mode": "range_guard_rerun",
+      "lower_bound": -2.546707220077515,
+      "upper_bound": 26.801061697006226
+    },
+    {
+      "node_id": 0,
+      "tensor_id": 109,
+      "mode": "range_guard_rerun",
+      "lower_bound": -3.5597428894042973,
+      "upper_bound": 37.46205612182617
+    },
+    {
+      "node_id": 4,
+      "tensor_id": 113,
+      "mode": "range_guard_rerun",
+      "lower_bound": -23.307968549728393,
+      "upper_bound": 19.76325457572937
+    },
+    {
+      "node_id": 2,
+      "tensor_id": 111,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 25,
+      "tensor_id": 134,
+      "mode": "range_guard_rerun",
+      "lower_bound": -1.3038626861572267,
+      "upper_bound": 13.721602554321288
+    },
+    {
+      "node_id": 40,
+      "tensor_id": 149,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 19,
+      "tensor_id": 128,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 8,
+      "tensor_id": 117,
+      "mode": "range_guard_rerun",
+      "lower_bound": -2.1601335525512697,
+      "upper_bound": 22.73283405303955
+    },
+    {
+      "node_id": 34,
+      "tensor_id": 143,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 36,
+      "tensor_id": 145,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 5,
+      "tensor_id": 114,
+      "mode": "range_guard_rerun",
+      "lower_bound": -93.19858882904052,
+      "upper_bound": 51.91192958831787
+    },
+    {
+      "node_id": 6,
+      "tensor_id": 115,
+      "mode": "range_guard_rerun",
+      "lower_bound": -1.2411065769195557,
+      "upper_bound": 13.061169214248656
+    },
+    {
+      "node_id": 18,
+      "tensor_id": 127,
+      "mode": "range_guard_rerun",
+      "lower_bound": -19.53294617652893,
+      "upper_bound": 20.064285821914673
+    },
+    {
+      "node_id": 22,
+      "tensor_id": 131,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 17,
+      "tensor_id": 126,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 31,
+      "tensor_id": 140,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 16,
+      "tensor_id": 125,
+      "mode": "range_guard_rerun",
+      "lower_bound": -1.147602367401123,
+      "upper_bound": 12.077148723602296
+    },
+    {
+      "node_id": 64,
+      "tensor_id": 173,
+      "mode": "range_guard_rerun",
+      "lower_bound": -50.90160694122314,
+      "upper_bound": 60.310149574279784
+    },
+    {
+      "node_id": 33,
+      "tensor_id": 142,
+      "mode": "range_guard_rerun",
+      "lower_bound": -1.0968273067474366,
+      "upper_bound": 11.542801656723023
+    },
+    {
+      "node_id": 10,
+      "tensor_id": 119,
+      "mode": "range_guard_rerun",
+      "lower_bound": -1.7886225128173827,
+      "upper_bound": 18.823122634887692
+    },
+    {
+      "node_id": 27,
+      "tensor_id": 136,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 11,
+      "tensor_id": 120,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 56,
+      "tensor_id": 165,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 72,
+      "tensor_id": 181,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 30,
+      "tensor_id": 139,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 47,
+      "tensor_id": 156,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 44,
+      "tensor_id": 153,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 52,
+      "tensor_id": 161,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 43,
+      "tensor_id": 152,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 39,
+      "tensor_id": 148,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 55,
+      "tensor_id": 164,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 65,
+      "tensor_id": 174,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 23,
+      "tensor_id": 132,
+      "mode": "dmr_compare_rerun"
+    },
+    {
+      "node_id": 61,
+      "tensor_id": 170,
+      "mode": "dmr_compare_rerun"
+    }
+  ],
+  "runtime_range_recalibration": {
+    "status": "runtime_calibrated_requires_disjoint_evaluation",
+    "margin_ratio": 0.05,
+    "runtime_reports": [
+      "artifacts\\reports\\resnet50_windows_avx2_release\\resnet50_runtime_val128_uncalibrated.json"
+    ],
+    "adjusted_nodes": [
+      {
+        "node_id": 3,
+        "bounds_before": [
+          -1.2127177238464357,
+          25.467072200775146
+        ],
+        "runtime_observed": [
+          0.0,
+          24.247270584106445
+        ],
+        "bounds_after": [
+          -2.546707220077515,
+          26.801061697006226
+        ]
+      },
+      {
+        "node_id": 0,
+        "bounds_before": [
+          -1.6951156616210938,
+          35.59742889404297
+        ],
+        "runtime_observed": [
+          0.0,
+          33.906898498535156
+        ],
+        "bounds_after": [
+          -3.5597428894042973,
+          37.46205612182617
+        ]
+      },
+      {
+        "node_id": 4,
+        "bounds_before": [
+          -21.350185680389405,
+          17.80547170639038
+        ],
+        "runtime_observed": [
+          -19.120563507080078,
+          17.619600296020508
+        ],
+        "bounds_after": [
+          -23.307968549728393,
+          19.76325457572937
+        ]
+      },
+      {
+        "node_id": 25,
+        "bounds_before": [
+          -0.6208869934082032,
+          13.038626861572265
+        ],
+        "runtime_observed": [
+          0.0,
+          12.384042739868164
+        ],
+        "bounds_after": [
+          -1.3038626861572267,
+          13.721602554321288
+        ]
+      },
+      {
+        "node_id": 8,
+        "bounds_before": [
+          -1.028635025024414,
+          21.601335525512695
+        ],
+        "runtime_observed": [
+          0.0,
+          20.379690170288086
+        ],
+        "bounds_after": [
+          -2.1601335525512697,
+          22.73283405303955
+        ]
+      },
+      {
+        "node_id": 5,
+        "bounds_before": [
+          -86.60265617370605,
+          45.315996932983396
+        ],
+        "runtime_observed": [
+          -35.14710235595703,
+          21.327348709106445
+        ],
+        "bounds_after": [
+          -93.19858882904052,
+          51.91192958831787
+        ]
+      },
+      {
+        "node_id": 6,
+        "bounds_before": [
+          -0.5910031318664551,
+          12.411065769195556
+        ],
+        "runtime_observed": [
+          0.0,
+          11.823259353637695
+        ],
+        "bounds_after": [
+          -1.2411065769195557,
+          13.061169214248656
+        ]
+      },
+      {
+        "node_id": 18,
+        "bounds_before": [
+          -17.733071994781493,
+          18.264411640167236
+        ],
+        "runtime_observed": [
+          -17.62861442565918,
+          11.916967391967773
+        ],
+        "bounds_after": [
+          -19.53294617652893,
+          20.064285821914673
+        ]
+      },
+      {
+        "node_id": 16,
+        "bounds_before": [
+          -0.5464773178100586,
+          11.47602367401123
+        ],
+        "runtime_observed": [
+          0.0,
+          10.953300476074219
+        ],
+        "bounds_after": [
+          -1.147602367401123,
+          12.077148723602296
+        ]
+      },
+      {
+        "node_id": 64,
+        "bounds_before": [
+          -21.02134590148926,
+          24.035475540161134
+        ],
+        "runtime_observed": [
+          -45.846527099609375,
+          55.255069732666016
+        ],
+        "bounds_after": [
+          -50.90160694122314,
+          60.310149574279784
+        ]
+      },
+      {
+        "node_id": 33,
+        "bounds_before": [
+          -0.5222987174987793,
+          10.968273067474366
+        ],
+        "runtime_observed": [
+          0.0,
+          10.310510635375977
+        ],
+        "bounds_after": [
+          -1.0968273067474366,
+          11.542801656723023
+        ]
+      },
+      {
+        "node_id": 10,
+        "bounds_before": [
+          -0.8517250061035156,
+          17.886225128173827
+        ],
+        "runtime_observed": [
+          0.0,
+          17.38928985595703
+        ],
+        "bounds_after": [
+          -1.7886225128173827,
+          18.823122634887692
+        ]
+      }
+    ]
+  }
+}

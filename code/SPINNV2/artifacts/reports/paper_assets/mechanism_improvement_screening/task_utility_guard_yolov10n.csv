@@ -1,0 +1,3 @@
+policy,status,events,critical_failure_reduction_ratio,guard_trigger_rate,clean_false_positive_rate,reduction_gain_vs_current,trigger_reduction_vs_current,decision,reason
+current_task_output_guard,measured,10000,0.5052264808362369,0.0146,0.0,0.0,0.0,keep_as_ablation,measured baseline task output guard
+task_utility_consistency_guard,measured,10000,0.9721254355400697,0.028,0.0,0.4668989547038328,-0.9178082191780822,adopt_as_main,task utility guard improves reduction or reduces rerun triggers under false-positive constraint

@@ -1,0 +1,44 @@
+{
+  "model": "yolov10n_dior_full_e30_b16",
+  "status": "grouped_protection_summary_from_existing_runtime_reports",
+  "task_output_guard_status": "not_implemented; grouped protection comparison is used as the minimum P5 deliverable",
+  "groups": [
+    {
+      "group": "control_path_nodes",
+      "mechanism": "dmr_compare_rerun",
+      "sampling": "stratified, 170 runtime nodes x 16 injections",
+      "protected_scope": "Gather/GatherElements and execution-control-sensitive nodes",
+      "baseline_critical_failures": 77,
+      "protected_critical_failures": 65,
+      "reduction_ratio": 0.15584415584415584,
+      "extra_memory_bytes": 48000,
+      "latency_overhead_ms": 1.2215000000000202,
+      "interpretation": "isolates control-path crash/error mitigation; not sufficient for task-output faults"
+    },
+    {
+      "group": "activation_prior_budget_nodes",
+      "mechanism": "budgeted_ilp_dmr",
+      "sampling": "activation-byte weighted prior, 125 samples x 16 injections",
+      "protected_scope": "40 budget-selected single-output runtime nodes",
+      "baseline_critical_failures": 56,
+      "protected_critical_failures": 43,
+      "reduction_ratio": 0.23214285714285715,
+      "extra_memory_bytes": 3276800,
+      "latency_overhead_ms": 30.30970000000002,
+      "interpretation": "realistic activation-byte prior; protection effective but reduction is moderate"
+    },
+    {
+      "group": "stratified_budget_nodes",
+      "mechanism": "budgeted_ilp_dmr",
+      "sampling": "stratified, 170 runtime nodes x 16 injections",
+      "protected_scope": "40 budget-selected single-output runtime nodes under stratified node coverage",
+      "baseline_critical_failures": 77,
+      "protected_critical_failures": 13,
+      "reduction_ratio": 0.8311688311688312,
+      "extra_memory_bytes": 3276800,
+      "latency_overhead_ms": 30.30970000000002,
+      "interpretation": "shows protection can remove many high-risk/control-sensitive failures when nodes are evenly covered"
+    }
+  ],
+  "thesis_claim": "YOLOv10n evidence currently supports task-level protection effectiveness and control-path mitigation. It should not be used alone to claim ILP superiority over all simple policies."
+}

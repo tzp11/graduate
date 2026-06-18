@@ -1,0 +1,97 @@
+{
+  "meta": {
+    "source": "existing ranked risk tables; scoring variants are post-hoc ablations"
+  },
+  "rows": [
+    {
+      "model": "resnet50_eurosat",
+      "variant": "critical_only",
+      "top1_node": 3,
+      "top10_nodes": "3,0,4,2,25,40,19,8,34,36",
+      "top10_mean_score": 0.062499999999999965,
+      "top10_mean_critical_component": 0.062499999999999965,
+      "top10_activation_bytes": 13246464
+    },
+    {
+      "model": "resnet50_eurosat",
+      "variant": "severity_only",
+      "top1_node": 3,
+      "top10_nodes": "3,0,25,2,4,40,8,34,36,19",
+      "top10_mean_score": 0.06154037373064107,
+      "top10_mean_critical_component": 0.062499999999999965,
+      "top10_activation_bytes": 13246464
+    },
+    {
+      "model": "resnet50_eurosat",
+      "variant": "exposure_only",
+      "top1_node": 0,
+      "top10_nodes": "0,4,14,10,5,6,13,9,15,18",
+      "top10_mean_score": 0.0434388879116022,
+      "top10_mean_critical_component": 0.03249999999999997,
+      "top10_activation_bytes": 28901376
+    },
+    {
+      "model": "resnet50_eurosat",
+      "variant": "no_exposure",
+      "top1_node": 3,
+      "top10_nodes": "3,0,25,2,4,40,8,34,36,19",
+      "top10_mean_score": 0.06223130464457947,
+      "top10_mean_critical_component": 0.062499999999999965,
+      "top10_activation_bytes": 13246464
+    },
+    {
+      "model": "resnet50_eurosat",
+      "variant": "full_score",
+      "top1_node": 3,
+      "top10_nodes": "3,0,4,2,25,40,19,8,34,36",
+      "top10_mean_score": 0.05800104246194201,
+      "top10_mean_critical_component": 0.062499999999999965,
+      "top10_activation_bytes": 13246464
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "variant": "critical_only",
+      "top1_node": 44,
+      "top10_nodes": "44,157,18,167,138,4,58,102,25,42",
+      "top10_mean_score": 0.18125,
+      "top10_mean_critical_component": 0.18125,
+      "top10_activation_bytes": 7894400
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "variant": "severity_only",
+      "top1_node": 44,
+      "top10_nodes": "44,157,18,167,42,43,66,4,25,58",
+      "top10_mean_score": 0.17504908267398295,
+      "top10_mean_critical_component": 0.175,
+      "top10_activation_bytes": 7452800
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "variant": "exposure_only",
+      "top1_node": 0,
+      "top10_nodes": "0,78,7,8,18,77,20,2,1,70",
+      "top10_mean_score": 0.028452516080211883,
+      "top10_mean_critical_component": 0.04375,
+      "top10_activation_bytes": 38502400
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "variant": "no_exposure",
+      "top1_node": 44,
+      "top10_nodes": "44,157,18,167,138,42,43,66,4,25",
+      "top10_mean_score": 0.17845000720624088,
+      "top10_mean_critical_component": 0.18125,
+      "top10_activation_bytes": 6204800
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "variant": "full_score",
+      "top1_node": 44,
+      "top10_nodes": "44,157,18,167,138,4,58,102,25,42",
+      "top10_mean_score": 0.16120787717547422,
+      "top10_mean_critical_component": 0.18125,
+      "top10_activation_bytes": 7894400
+    }
+  ]
+}

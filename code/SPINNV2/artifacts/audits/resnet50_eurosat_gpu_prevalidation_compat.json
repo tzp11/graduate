@@ -1,0 +1,19 @@
+{
+  "model": "artifacts\\models\\resnet50_eurosat_gpu_prevalidation.onnx",
+  "node_count": 122,
+  "op_counts": {
+    "Add": 16,
+    "Conv": 53,
+    "Flatten": 1,
+    "Gemm": 1,
+    "GlobalAveragePool": 1,
+    "MaxPool": 1,
+    "Relu": 49
+  },
+  "unsupported_import_ops": [],
+  "lowered_import_ops": [
+    "GlobalAveragePool"
+  ],
+  "compiler_only_or_unsupported_runtime_ops": [],
+  "import_compatible": true
+}

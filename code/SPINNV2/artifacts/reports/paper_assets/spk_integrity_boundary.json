@@ -1,0 +1,30 @@
+{
+  "generated_at_utc": "2026-05-28T03:11:34.913489+00:00",
+  "source_spk": "artifacts\\spk\\resnet50_eurosat_gpu_prevalidation_cpu_generic.spk",
+  "corrupt_spk": "artifacts\\reports\\boundary_experiments\\resnet50_eurosat_gpu_prevalidation_cpu_generic_corrupt_bit0.spk",
+  "runtime_runner": "build\\runtime\\Release\\spkv2_run.exe",
+  "input_bin": "artifacts\\inputs\\resnet50_eurosat_test_000003.bin",
+  "flipped_section": {
+    "kind": 6,
+    "flags": 0,
+    "offset": 28464,
+    "size": 94007856,
+    "alignment": 16,
+    "reserved": 0
+  },
+  "byte_offset": 47032392,
+  "bit_index": 0,
+  "byte_before": 14,
+  "byte_after": 15,
+  "command": [
+    "build\\runtime\\Release\\spkv2_run.exe",
+    "artifacts\\reports\\boundary_experiments\\resnet50_eurosat_gpu_prevalidation_cpu_generic_corrupt_bit0.spk",
+    "artifacts\\inputs\\resnet50_eurosat_test_000003.bin",
+    "artifacts\\reports\\boundary_experiments\\resnet50_eurosat_gpu_prevalidation_cpu_generic_corrupt_output.bin"
+  ],
+  "returncode": 1,
+  "stdout": "",
+  "stderr": "failed to load SPK\n",
+  "checksum_rejected": true,
+  "interpretation": "loader rejected corrupted SPK as expected"
+}

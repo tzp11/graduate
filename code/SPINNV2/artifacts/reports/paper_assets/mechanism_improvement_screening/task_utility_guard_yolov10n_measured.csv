@@ -1,0 +1,2 @@
+method,current_reduction_ratio,utility_reduction_ratio,reduction_gain_vs_current,current_guard_trigger_rate,utility_guard_trigger_rate,trigger_reduction_vs_current,current_clean_false_positive_rate,utility_clean_false_positive_rate
+task_utility_consistency_guard,0.5052264808362369,0.9721254355400697,0.4668989547038328,0.0146,0.028,-0.9178082191780822,0.0,0.0

@@ -1,0 +1,52 @@
+{
+  "model": "artifacts\\models\\yolov10n_coco_arch.onnx",
+  "node_count": 374,
+  "op_counts": {
+    "Add": 13,
+    "Cast": 3,
+    "Concat": 21,
+    "Constant": 44,
+    "ConstantOfShape": 2,
+    "Conv": 83,
+    "Div": 2,
+    "Expand": 2,
+    "Flatten": 2,
+    "Gather": 4,
+    "GatherElements": 2,
+    "MatMul": 2,
+    "MaxPool": 3,
+    "Mod": 1,
+    "Mul": 74,
+    "ReduceMax": 1,
+    "Reshape": 13,
+    "Resize": 2,
+    "Shape": 3,
+    "Sigmoid": 70,
+    "Slice": 2,
+    "Softmax": 2,
+    "Split": 11,
+    "Sub": 1,
+    "Tile": 2,
+    "TopK": 2,
+    "Transpose": 4,
+    "Unsqueeze": 3
+  },
+  "unsupported_import_ops": [
+    "Constant",
+    "ConstantOfShape",
+    "Expand",
+    "Gather",
+    "Shape",
+    "Slice"
+  ],
+  "lowered_import_ops": [],
+  "compiler_only_or_unsupported_runtime_ops": [
+    "Constant",
+    "ConstantOfShape",
+    "Expand",
+    "Gather",
+    "Shape",
+    "Slice"
+  ],
+  "import_compatible": false
+}

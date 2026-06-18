@@ -1,0 +1,47 @@
+{
+  "image": "artifacts\\data\\dior\\images\\test\\test_00000069.jpg",
+  "fault_event": {
+    "model_id": "yolov10n_dior",
+    "sample_id": "test_00000069",
+    "node_id": 4,
+    "tensor_id": 197,
+    "element_index": 106717,
+    "bit_index": 30,
+    "invocation_index": 1,
+    "seed": 2093
+  },
+  "source_failure_mode": "task_output_failure",
+  "unprotected_consequence": {
+    "critical_failure": true,
+    "severity": 1.0,
+    "missed_targets": 3,
+    "false_positives": 300,
+    "class_changes": 0,
+    "localization_degradation": 1.0,
+    "baseline_true_positives": 3
+  },
+  "protected_consequence": {
+    "critical_failure": false,
+    "severity": 0.0,
+    "missed_targets": 0,
+    "false_positives": 0,
+    "class_changes": 0,
+    "localization_degradation": 0.0,
+    "baseline_true_positives": 3
+  },
+  "unprotected_stats": {
+    "injected_faults": 1,
+    "detected_faults": 0,
+    "recovered_faults": 0,
+    "unrecovered_faults": 0,
+    "rerun_count": 0
+  },
+  "protected_stats": {
+    "injected_faults": 1,
+    "detected_faults": 1,
+    "recovered_faults": 1,
+    "unrecovered_faults": 0,
+    "rerun_count": 1
+  },
+  "output_image": "artifacts\\reports\\yolov10n_dior_full_e30_b16\\figures\\yolov10n_fault_recovery_case.png"
+}

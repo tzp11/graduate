@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "model_id": "resnet50_eurosat_gpu_prevalidation",
+  "platform_profile": "win_x64_cpu_ref",
+  "fault_prior": "activation_bytes_weighted_single_bit",
+  "purpose": "runtime_primitive_validation_before_budget_optimization",
+  "budgets": {
+    "latency_overhead_ms": null,
+    "extra_memory_bytes": 8388608
+  },
+  "nodes": [
+    {
+      "node_id": 3,
+      "tensor_id": 112,
+      "mode": "dmr_compare_rerun",
+      "compare_atol": 0.0,
+      "compare_rtol": 0.0
+    }
+  ]
+}

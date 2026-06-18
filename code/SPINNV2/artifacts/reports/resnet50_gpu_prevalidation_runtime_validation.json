@@ -1,0 +1,41 @@
+{
+  "model_id": "resnet50_eurosat_gpu_prevalidation",
+  "sample_id": "test_000003",
+  "label": 8,
+  "protected_runtime_object": {
+    "python_candidate": "layer1.0.relu@2",
+    "runtime_node_id": 3,
+    "runtime_tensor_id": 112
+  },
+  "fault_event": {
+    "element_index": 170011,
+    "bit_index": 28,
+    "invocation_index": 1
+  },
+  "baseline": {
+    "onnxruntime_class": 8,
+    "spinnv2_class": 8,
+    "max_abs_error": 0.0000209808349609375,
+    "spinnv2_elapsed_ms_single_run": 33947.77
+  },
+  "unprotected_fault": {
+    "class": 9,
+    "injected_faults": 1,
+    "detected_faults": 0,
+    "recovered_faults": 0,
+    "max_abs_vs_baseline": 15233457.0
+  },
+  "dmr_fault": {
+    "class": 8,
+    "injected_faults": 1,
+    "detected_faults": 1,
+    "recovered_faults": 1,
+    "max_abs_vs_baseline": 0.0
+  },
+  "dmr_no_fault": {
+    "class": 8,
+    "max_abs_vs_baseline": 0.0,
+    "elapsed_ms_single_run": 33919.27
+  },
+  "latency_note": "Single-run timings are recorded for traceability only; repeated measurements are required for overhead claims."
+}

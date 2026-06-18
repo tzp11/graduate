@@ -1,0 +1,23 @@
+{
+  "onnx": "artifacts\\models\\yolov10n_dior_full_e30_b16.onnx",
+  "spk": "artifacts\\spk\\yolov10n_dior_full_e30_b16_cpu_generic.spk",
+  "input": "artifacts\\inputs\\yolov10n_dior_full_test_00000001.bin",
+  "element_count": 1800,
+  "max_abs": 6.103515625e-05,
+  "mean_abs": 2.3087693534762366e-06,
+  "all_finite": true,
+  "runtime_stats": {
+    "injected_faults": 0,
+    "detected_faults": 0,
+    "recovered_faults": 0,
+    "unrecovered_faults": 0,
+    "rerun_count": 0
+  },
+  "detection_agreement": {
+    "critical_failure_vs_onnx": false,
+    "missed_targets": 0,
+    "false_positives": 0,
+    "class_changes": 0,
+    "localization_degradation": 1.2767055698349214e-06
+  }
+}

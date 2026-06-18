@@ -1,0 +1,2682 @@
+{
+  "version": 1,
+  "mapping_method": "ordered Conv/Relu/Gemm semantic outputs to ONNX outputs, followed by optimized tensor lookup",
+  "candidate_count": 103,
+  "retained_count": 70,
+  "mappings": [
+    {
+      "module_name": "conv1",
+      "invocation_index": 1,
+      "element_count": 802816,
+      "node_id": 0,
+      "tensor_id": 0,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/conv1/Conv",
+      "onnx_output_name": "/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "relu",
+      "invocation_index": 1,
+      "element_count": 802816,
+      "node_id": 1,
+      "tensor_id": 1,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/relu/Relu",
+      "onnx_output_name": "/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 0,
+      "runtime_tensor_id": 109,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          7,
+          7
+        ],
+        "pads": [
+          3,
+          3,
+          3,
+          3
+        ],
+        "strides": [
+          2,
+          2
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer1.0.conv1",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 2,
+      "tensor_id": 2,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.0/conv1/Conv",
+      "onnx_output_name": "/layer1/layer1.0/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer1.0.relu",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 3,
+      "tensor_id": 3,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer1/layer1.0/relu/Relu",
+      "onnx_output_name": "/layer1/layer1.0/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 2,
+      "runtime_tensor_id": 111,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer1.0.conv2",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 4,
+      "tensor_id": 4,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.0/conv2/Conv",
+      "onnx_output_name": "/layer1/layer1.0/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer1.0.relu",
+      "invocation_index": 2,
+      "element_count": 200704,
+      "node_id": 5,
+      "tensor_id": 5,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer1/layer1.0/relu_1/Relu",
+      "onnx_output_name": "/layer1/layer1.0/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 3,
+      "runtime_tensor_id": 112,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer1.0.conv3",
+      "invocation_index": 1,
+      "element_count": 802816,
+      "node_id": 6,
+      "tensor_id": 6,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.0/conv3/Conv",
+      "onnx_output_name": "/layer1/layer1.0/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 4,
+      "runtime_tensor_id": 113,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer1.0.downsample.0",
+      "invocation_index": 1,
+      "element_count": 802816,
+      "node_id": 7,
+      "tensor_id": 7,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.0/downsample/downsample.0/Conv",
+      "onnx_output_name": "/layer1/layer1.0/downsample/downsample.0/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 5,
+      "runtime_tensor_id": 114,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer1.0.relu",
+      "invocation_index": 3,
+      "element_count": 802816,
+      "node_id": 8,
+      "tensor_id": 8,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer1/layer1.0/relu_2/Relu",
+      "onnx_output_name": "/layer1/layer1.0/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 6,
+      "runtime_tensor_id": 115,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer1.1.conv1",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 9,
+      "tensor_id": 9,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.1/conv1/Conv",
+      "onnx_output_name": "/layer1/layer1.1/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer1.1.relu",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 10,
+      "tensor_id": 10,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer1/layer1.1/relu/Relu",
+      "onnx_output_name": "/layer1/layer1.1/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 7,
+      "runtime_tensor_id": 116,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer1.1.conv2",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 11,
+      "tensor_id": 11,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.1/conv2/Conv",
+      "onnx_output_name": "/layer1/layer1.1/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer1.1.relu",
+      "invocation_index": 2,
+      "element_count": 200704,
+      "node_id": 12,
+      "tensor_id": 12,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer1/layer1.1/relu_1/Relu",
+      "onnx_output_name": "/layer1/layer1.1/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 8,
+      "runtime_tensor_id": 117,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer1.1.conv3",
+      "invocation_index": 1,
+      "element_count": 802816,
+      "node_id": 13,
+      "tensor_id": 13,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.1/conv3/Conv",
+      "onnx_output_name": "/layer1/layer1.1/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 9,
+      "runtime_tensor_id": 118,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer1.1.relu",
+      "invocation_index": 3,
+      "element_count": 802816,
+      "node_id": 14,
+      "tensor_id": 14,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer1/layer1.1/relu_2/Relu",
+      "onnx_output_name": "/layer1/layer1.1/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 10,
+      "runtime_tensor_id": 119,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer1.2.conv1",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 15,
+      "tensor_id": 15,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.2/conv1/Conv",
+      "onnx_output_name": "/layer1/layer1.2/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer1.2.relu",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 16,
+      "tensor_id": 16,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer1/layer1.2/relu/Relu",
+      "onnx_output_name": "/layer1/layer1.2/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 11,
+      "runtime_tensor_id": 120,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer1.2.conv2",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 17,
+      "tensor_id": 17,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.2/conv2/Conv",
+      "onnx_output_name": "/layer1/layer1.2/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer1.2.relu",
+      "invocation_index": 2,
+      "element_count": 200704,
+      "node_id": 18,
+      "tensor_id": 18,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer1/layer1.2/relu_1/Relu",
+      "onnx_output_name": "/layer1/layer1.2/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 12,
+      "runtime_tensor_id": 121,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer1.2.conv3",
+      "invocation_index": 1,
+      "element_count": 802816,
+      "node_id": 19,
+      "tensor_id": 19,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer1/layer1.2/conv3/Conv",
+      "onnx_output_name": "/layer1/layer1.2/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 13,
+      "runtime_tensor_id": 122,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer1.2.relu",
+      "invocation_index": 3,
+      "element_count": 802816,
+      "node_id": 20,
+      "tensor_id": 20,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer1/layer1.2/relu_2/Relu",
+      "onnx_output_name": "/layer1/layer1.2/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 14,
+      "runtime_tensor_id": 123,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.0.conv1",
+      "invocation_index": 1,
+      "element_count": 401408,
+      "node_id": 21,
+      "tensor_id": 21,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.0/conv1/Conv",
+      "onnx_output_name": "/layer2/layer2.0/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer2.0.relu",
+      "invocation_index": 1,
+      "element_count": 401408,
+      "node_id": 22,
+      "tensor_id": 22,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.0/relu/Relu",
+      "onnx_output_name": "/layer2/layer2.0/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 15,
+      "runtime_tensor_id": 124,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.0.conv2",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 23,
+      "tensor_id": 23,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.0/conv2/Conv",
+      "onnx_output_name": "/layer2/layer2.0/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer2.0.relu",
+      "invocation_index": 2,
+      "element_count": 100352,
+      "node_id": 24,
+      "tensor_id": 24,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.0/relu_1/Relu",
+      "onnx_output_name": "/layer2/layer2.0/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 16,
+      "runtime_tensor_id": 125,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          2,
+          2
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.0.conv3",
+      "invocation_index": 1,
+      "element_count": 401408,
+      "node_id": 25,
+      "tensor_id": 25,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.0/conv3/Conv",
+      "onnx_output_name": "/layer2/layer2.0/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 17,
+      "runtime_tensor_id": 126,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer2.0.downsample.0",
+      "invocation_index": 1,
+      "element_count": 401408,
+      "node_id": 26,
+      "tensor_id": 26,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.0/downsample/downsample.0/Conv",
+      "onnx_output_name": "/layer2/layer2.0/downsample/downsample.0/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 18,
+      "runtime_tensor_id": 127,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "module_name": "layer2.0.relu",
+      "invocation_index": 3,
+      "element_count": 401408,
+      "node_id": 27,
+      "tensor_id": 27,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.0/relu_2/Relu",
+      "onnx_output_name": "/layer2/layer2.0/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 19,
+      "runtime_tensor_id": 128,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.1.conv1",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 28,
+      "tensor_id": 28,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.1/conv1/Conv",
+      "onnx_output_name": "/layer2/layer2.1/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer2.1.relu",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 29,
+      "tensor_id": 29,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.1/relu/Relu",
+      "onnx_output_name": "/layer2/layer2.1/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 20,
+      "runtime_tensor_id": 129,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.1.conv2",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 30,
+      "tensor_id": 30,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.1/conv2/Conv",
+      "onnx_output_name": "/layer2/layer2.1/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer2.1.relu",
+      "invocation_index": 2,
+      "element_count": 100352,
+      "node_id": 31,
+      "tensor_id": 31,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.1/relu_1/Relu",
+      "onnx_output_name": "/layer2/layer2.1/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 21,
+      "runtime_tensor_id": 130,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.1.conv3",
+      "invocation_index": 1,
+      "element_count": 401408,
+      "node_id": 32,
+      "tensor_id": 32,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.1/conv3/Conv",
+      "onnx_output_name": "/layer2/layer2.1/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 22,
+      "runtime_tensor_id": 131,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer2.1.relu",
+      "invocation_index": 3,
+      "element_count": 401408,
+      "node_id": 33,
+      "tensor_id": 33,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.1/relu_2/Relu",
+      "onnx_output_name": "/layer2/layer2.1/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 23,
+      "runtime_tensor_id": 132,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.2.conv1",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 34,
+      "tensor_id": 34,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.2/conv1/Conv",
+      "onnx_output_name": "/layer2/layer2.2/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer2.2.relu",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 35,
+      "tensor_id": 35,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.2/relu/Relu",
+      "onnx_output_name": "/layer2/layer2.2/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 24,
+      "runtime_tensor_id": 133,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.2.conv2",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 36,
+      "tensor_id": 36,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.2/conv2/Conv",
+      "onnx_output_name": "/layer2/layer2.2/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer2.2.relu",
+      "invocation_index": 2,
+      "element_count": 100352,
+      "node_id": 37,
+      "tensor_id": 37,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.2/relu_1/Relu",
+      "onnx_output_name": "/layer2/layer2.2/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 25,
+      "runtime_tensor_id": 134,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.2.conv3",
+      "invocation_index": 1,
+      "element_count": 401408,
+      "node_id": 38,
+      "tensor_id": 38,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.2/conv3/Conv",
+      "onnx_output_name": "/layer2/layer2.2/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 26,
+      "runtime_tensor_id": 135,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer2.2.relu",
+      "invocation_index": 3,
+      "element_count": 401408,
+      "node_id": 39,
+      "tensor_id": 39,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.2/relu_2/Relu",
+      "onnx_output_name": "/layer2/layer2.2/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 27,
+      "runtime_tensor_id": 136,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.3.conv1",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 40,
+      "tensor_id": 40,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.3/conv1/Conv",
+      "onnx_output_name": "/layer2/layer2.3/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer2.3.relu",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 41,
+      "tensor_id": 41,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.3/relu/Relu",
+      "onnx_output_name": "/layer2/layer2.3/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 28,
+      "runtime_tensor_id": 137,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.3.conv2",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 42,
+      "tensor_id": 42,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.3/conv2/Conv",
+      "onnx_output_name": "/layer2/layer2.3/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer2.3.relu",
+      "invocation_index": 2,
+      "element_count": 100352,
+      "node_id": 43,
+      "tensor_id": 43,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.3/relu_1/Relu",
+      "onnx_output_name": "/layer2/layer2.3/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 29,
+      "runtime_tensor_id": 138,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer2.3.conv3",
+      "invocation_index": 1,
+      "element_count": 401408,
+      "node_id": 44,
+      "tensor_id": 44,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer2/layer2.3/conv3/Conv",
+      "onnx_output_name": "/layer2/layer2.3/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 30,
+      "runtime_tensor_id": 139,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer2.3.relu",
+      "invocation_index": 3,
+      "element_count": 401408,
+      "node_id": 45,
+      "tensor_id": 45,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer2/layer2.3/relu_2/Relu",
+      "onnx_output_name": "/layer2/layer2.3/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 31,
+      "runtime_tensor_id": 140,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.0.conv1",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 46,
+      "tensor_id": 46,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.0/conv1/Conv",
+      "onnx_output_name": "/layer3/layer3.0/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.0.relu",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 47,
+      "tensor_id": 47,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.0/relu/Relu",
+      "onnx_output_name": "/layer3/layer3.0/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 32,
+      "runtime_tensor_id": 141,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.0.conv2",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 48,
+      "tensor_id": 48,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.0/conv2/Conv",
+      "onnx_output_name": "/layer3/layer3.0/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.0.relu",
+      "invocation_index": 2,
+      "element_count": 50176,
+      "node_id": 49,
+      "tensor_id": 49,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.0/relu_1/Relu",
+      "onnx_output_name": "/layer3/layer3.0/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 33,
+      "runtime_tensor_id": 142,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          2,
+          2
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.0.conv3",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 50,
+      "tensor_id": 50,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.0/conv3/Conv",
+      "onnx_output_name": "/layer3/layer3.0/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 34,
+      "runtime_tensor_id": 143,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer3.0.downsample.0",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 51,
+      "tensor_id": 51,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.0/downsample/downsample.0/Conv",
+      "onnx_output_name": "/layer3/layer3.0/downsample/downsample.0/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 35,
+      "runtime_tensor_id": 144,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "module_name": "layer3.0.relu",
+      "invocation_index": 3,
+      "element_count": 200704,
+      "node_id": 52,
+      "tensor_id": 52,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.0/relu_2/Relu",
+      "onnx_output_name": "/layer3/layer3.0/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 36,
+      "runtime_tensor_id": 145,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.1.conv1",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 53,
+      "tensor_id": 53,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.1/conv1/Conv",
+      "onnx_output_name": "/layer3/layer3.1/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.1.relu",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 54,
+      "tensor_id": 54,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.1/relu/Relu",
+      "onnx_output_name": "/layer3/layer3.1/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 37,
+      "runtime_tensor_id": 146,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.1.conv2",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 55,
+      "tensor_id": 55,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.1/conv2/Conv",
+      "onnx_output_name": "/layer3/layer3.1/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.1.relu",
+      "invocation_index": 2,
+      "element_count": 50176,
+      "node_id": 56,
+      "tensor_id": 56,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.1/relu_1/Relu",
+      "onnx_output_name": "/layer3/layer3.1/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 38,
+      "runtime_tensor_id": 147,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.1.conv3",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 57,
+      "tensor_id": 57,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.1/conv3/Conv",
+      "onnx_output_name": "/layer3/layer3.1/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 39,
+      "runtime_tensor_id": 148,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer3.1.relu",
+      "invocation_index": 3,
+      "element_count": 200704,
+      "node_id": 58,
+      "tensor_id": 58,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.1/relu_2/Relu",
+      "onnx_output_name": "/layer3/layer3.1/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 40,
+      "runtime_tensor_id": 149,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.2.conv1",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 59,
+      "tensor_id": 59,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.2/conv1/Conv",
+      "onnx_output_name": "/layer3/layer3.2/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.2.relu",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 60,
+      "tensor_id": 60,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.2/relu/Relu",
+      "onnx_output_name": "/layer3/layer3.2/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 41,
+      "runtime_tensor_id": 150,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.2.conv2",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 61,
+      "tensor_id": 61,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.2/conv2/Conv",
+      "onnx_output_name": "/layer3/layer3.2/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.2.relu",
+      "invocation_index": 2,
+      "element_count": 50176,
+      "node_id": 62,
+      "tensor_id": 62,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.2/relu_1/Relu",
+      "onnx_output_name": "/layer3/layer3.2/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 42,
+      "runtime_tensor_id": 151,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.2.conv3",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 63,
+      "tensor_id": 63,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.2/conv3/Conv",
+      "onnx_output_name": "/layer3/layer3.2/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 43,
+      "runtime_tensor_id": 152,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer3.2.relu",
+      "invocation_index": 3,
+      "element_count": 200704,
+      "node_id": 64,
+      "tensor_id": 64,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.2/relu_2/Relu",
+      "onnx_output_name": "/layer3/layer3.2/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 44,
+      "runtime_tensor_id": 153,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.3.conv1",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 65,
+      "tensor_id": 65,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.3/conv1/Conv",
+      "onnx_output_name": "/layer3/layer3.3/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.3.relu",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 66,
+      "tensor_id": 66,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.3/relu/Relu",
+      "onnx_output_name": "/layer3/layer3.3/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 45,
+      "runtime_tensor_id": 154,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.3.conv2",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 67,
+      "tensor_id": 67,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.3/conv2/Conv",
+      "onnx_output_name": "/layer3/layer3.3/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.3.relu",
+      "invocation_index": 2,
+      "element_count": 50176,
+      "node_id": 68,
+      "tensor_id": 68,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.3/relu_1/Relu",
+      "onnx_output_name": "/layer3/layer3.3/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 46,
+      "runtime_tensor_id": 155,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.3.conv3",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 69,
+      "tensor_id": 69,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.3/conv3/Conv",
+      "onnx_output_name": "/layer3/layer3.3/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 47,
+      "runtime_tensor_id": 156,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer3.3.relu",
+      "invocation_index": 3,
+      "element_count": 200704,
+      "node_id": 70,
+      "tensor_id": 70,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.3/relu_2/Relu",
+      "onnx_output_name": "/layer3/layer3.3/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 48,
+      "runtime_tensor_id": 157,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.4.conv1",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 71,
+      "tensor_id": 71,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.4/conv1/Conv",
+      "onnx_output_name": "/layer3/layer3.4/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.4.relu",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 72,
+      "tensor_id": 72,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.4/relu/Relu",
+      "onnx_output_name": "/layer3/layer3.4/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 49,
+      "runtime_tensor_id": 158,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.4.conv2",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 73,
+      "tensor_id": 73,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.4/conv2/Conv",
+      "onnx_output_name": "/layer3/layer3.4/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.4.relu",
+      "invocation_index": 2,
+      "element_count": 50176,
+      "node_id": 74,
+      "tensor_id": 74,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.4/relu_1/Relu",
+      "onnx_output_name": "/layer3/layer3.4/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 50,
+      "runtime_tensor_id": 159,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.4.conv3",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 75,
+      "tensor_id": 75,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.4/conv3/Conv",
+      "onnx_output_name": "/layer3/layer3.4/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 51,
+      "runtime_tensor_id": 160,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer3.4.relu",
+      "invocation_index": 3,
+      "element_count": 200704,
+      "node_id": 76,
+      "tensor_id": 76,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.4/relu_2/Relu",
+      "onnx_output_name": "/layer3/layer3.4/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 52,
+      "runtime_tensor_id": 161,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.5.conv1",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 77,
+      "tensor_id": 77,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.5/conv1/Conv",
+      "onnx_output_name": "/layer3/layer3.5/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.5.relu",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 78,
+      "tensor_id": 78,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.5/relu/Relu",
+      "onnx_output_name": "/layer3/layer3.5/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 53,
+      "runtime_tensor_id": 162,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.5.conv2",
+      "invocation_index": 1,
+      "element_count": 50176,
+      "node_id": 79,
+      "tensor_id": 79,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.5/conv2/Conv",
+      "onnx_output_name": "/layer3/layer3.5/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer3.5.relu",
+      "invocation_index": 2,
+      "element_count": 50176,
+      "node_id": 80,
+      "tensor_id": 80,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.5/relu_1/Relu",
+      "onnx_output_name": "/layer3/layer3.5/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 54,
+      "runtime_tensor_id": 163,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer3.5.conv3",
+      "invocation_index": 1,
+      "element_count": 200704,
+      "node_id": 81,
+      "tensor_id": 81,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer3/layer3.5/conv3/Conv",
+      "onnx_output_name": "/layer3/layer3.5/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 55,
+      "runtime_tensor_id": 164,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer3.5.relu",
+      "invocation_index": 3,
+      "element_count": 200704,
+      "node_id": 82,
+      "tensor_id": 82,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer3/layer3.5/relu_2/Relu",
+      "onnx_output_name": "/layer3/layer3.5/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 56,
+      "runtime_tensor_id": 165,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer4.0.conv1",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 83,
+      "tensor_id": 83,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.0/conv1/Conv",
+      "onnx_output_name": "/layer4/layer4.0/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer4.0.relu",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 84,
+      "tensor_id": 84,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer4/layer4.0/relu/Relu",
+      "onnx_output_name": "/layer4/layer4.0/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 57,
+      "runtime_tensor_id": 166,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer4.0.conv2",
+      "invocation_index": 1,
+      "element_count": 25088,
+      "node_id": 85,
+      "tensor_id": 85,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.0/conv2/Conv",
+      "onnx_output_name": "/layer4/layer4.0/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer4.0.relu",
+      "invocation_index": 2,
+      "element_count": 25088,
+      "node_id": 86,
+      "tensor_id": 86,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer4/layer4.0/relu_1/Relu",
+      "onnx_output_name": "/layer4/layer4.0/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 58,
+      "runtime_tensor_id": 167,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          2,
+          2
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer4.0.conv3",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 87,
+      "tensor_id": 87,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.0/conv3/Conv",
+      "onnx_output_name": "/layer4/layer4.0/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 59,
+      "runtime_tensor_id": 168,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer4.0.downsample.0",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 88,
+      "tensor_id": 88,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.0/downsample/downsample.0/Conv",
+      "onnx_output_name": "/layer4/layer4.0/downsample/downsample.0/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 60,
+      "runtime_tensor_id": 169,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          2,
+          2
+        ]
+      }
+    },
+    {
+      "module_name": "layer4.0.relu",
+      "invocation_index": 3,
+      "element_count": 100352,
+      "node_id": 89,
+      "tensor_id": 89,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer4/layer4.0/relu_2/Relu",
+      "onnx_output_name": "/layer4/layer4.0/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 61,
+      "runtime_tensor_id": 170,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer4.1.conv1",
+      "invocation_index": 1,
+      "element_count": 25088,
+      "node_id": 90,
+      "tensor_id": 90,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.1/conv1/Conv",
+      "onnx_output_name": "/layer4/layer4.1/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer4.1.relu",
+      "invocation_index": 1,
+      "element_count": 25088,
+      "node_id": 91,
+      "tensor_id": 91,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer4/layer4.1/relu/Relu",
+      "onnx_output_name": "/layer4/layer4.1/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 62,
+      "runtime_tensor_id": 171,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer4.1.conv2",
+      "invocation_index": 1,
+      "element_count": 25088,
+      "node_id": 92,
+      "tensor_id": 92,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.1/conv2/Conv",
+      "onnx_output_name": "/layer4/layer4.1/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer4.1.relu",
+      "invocation_index": 2,
+      "element_count": 25088,
+      "node_id": 93,
+      "tensor_id": 93,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer4/layer4.1/relu_1/Relu",
+      "onnx_output_name": "/layer4/layer4.1/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 63,
+      "runtime_tensor_id": 172,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer4.1.conv3",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 94,
+      "tensor_id": 94,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.1/conv3/Conv",
+      "onnx_output_name": "/layer4/layer4.1/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 64,
+      "runtime_tensor_id": 173,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer4.1.relu",
+      "invocation_index": 3,
+      "element_count": 100352,
+      "node_id": 95,
+      "tensor_id": 95,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer4/layer4.1/relu_2/Relu",
+      "onnx_output_name": "/layer4/layer4.1/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 65,
+      "runtime_tensor_id": 174,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer4.2.conv1",
+      "invocation_index": 1,
+      "element_count": 25088,
+      "node_id": 96,
+      "tensor_id": 96,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.2/conv1/Conv",
+      "onnx_output_name": "/layer4/layer4.2/conv1/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer4.2.relu",
+      "invocation_index": 1,
+      "element_count": 25088,
+      "node_id": 97,
+      "tensor_id": 97,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer4/layer4.2/relu/Relu",
+      "onnx_output_name": "/layer4/layer4.2/relu/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 66,
+      "runtime_tensor_id": 175,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer4.2.conv2",
+      "invocation_index": 1,
+      "element_count": 25088,
+      "node_id": 98,
+      "tensor_id": 98,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.2/conv2/Conv",
+      "onnx_output_name": "/layer4/layer4.2/conv2/Conv_output_0",
+      "retained_after_passes": false,
+      "runtime_node_id": null,
+      "runtime_tensor_id": null,
+      "runtime_op_type": null,
+      "runtime_attrs": null
+    },
+    {
+      "module_name": "layer4.2.relu",
+      "invocation_index": 2,
+      "element_count": 25088,
+      "node_id": 99,
+      "tensor_id": 99,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer4/layer4.2/relu_1/Relu",
+      "onnx_output_name": "/layer4/layer4.2/relu_1/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 67,
+      "runtime_tensor_id": 176,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          3,
+          3
+        ],
+        "pads": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strides": [
+          1,
+          1
+        ],
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "layer4.2.conv3",
+      "invocation_index": 1,
+      "element_count": 100352,
+      "node_id": 100,
+      "tensor_id": 100,
+      "onnx_op_type": "Conv",
+      "onnx_node_name": "/layer4/layer4.2/conv3/Conv",
+      "onnx_output_name": "/layer4/layer4.2/conv3/Conv_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 68,
+      "runtime_tensor_id": 177,
+      "runtime_op_type": "Conv",
+      "runtime_attrs": {
+        "dilations": [
+          1,
+          1
+        ],
+        "group": 1,
+        "kernel_shape": [
+          1,
+          1
+        ],
+        "pads": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "strides": [
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "module_name": "layer4.2.relu",
+      "invocation_index": 3,
+      "element_count": 100352,
+      "node_id": 101,
+      "tensor_id": 101,
+      "onnx_op_type": "Relu",
+      "onnx_node_name": "/layer4/layer4.2/relu_2/Relu",
+      "onnx_output_name": "/layer4/layer4.2/relu_2/Relu_output_0",
+      "retained_after_passes": true,
+      "runtime_node_id": 69,
+      "runtime_tensor_id": 178,
+      "runtime_op_type": "Add",
+      "runtime_attrs": {
+        "fused_activation": "Relu"
+      }
+    },
+    {
+      "module_name": "fc",
+      "invocation_index": 1,
+      "element_count": 10,
+      "node_id": 102,
+      "tensor_id": 102,
+      "onnx_op_type": "Gemm",
+      "onnx_node_name": "/fc/Gemm",
+      "onnx_output_name": "logits",
+      "retained_after_passes": true,
+      "runtime_node_id": 72,
+      "runtime_tensor_id": 181,
+      "runtime_op_type": "Gemm",
+      "runtime_attrs": {
+        "alpha": 1.0,
+        "beta": 1.0,
+        "transB": 1
+      }
+    }
+  ]
+}

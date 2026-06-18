@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "source": "existing budget sweeps and same-event runtime comparisons"
+  },
+  "rows": [
+    {
+      "model": "resnet50_eurosat",
+      "comparison_type": "predicted_budget_selection",
+      "method": "ilp",
+      "selected_count": 30,
+      "mitigation_ratio": 0.6614106131613992,
+      "risk_reduction": 0.0183974559810778,
+      "residual_failure_probability": 0.009418027494674,
+      "used_latency_ms": 19.801838040807368,
+      "used_peak_extra_memory_bytes": 3211264
+    },
+    {
+      "model": "resnet50_eurosat",
+      "comparison_type": "predicted_budget_selection",
+      "method": "greedy",
+      "selected_count": 34,
+      "mitigation_ratio": 0.6343298154996558,
+      "risk_reduction": 0.0176441905012074,
+      "residual_failure_probability": 0.0101712929745444,
+      "used_latency_ms": 19.608066326105387,
+      "used_peak_extra_memory_bytes": 3211264
+    },
+    {
+      "model": "resnet50_eurosat",
+      "comparison_type": "predicted_budget_selection",
+      "method": "topk_range_guard_rerun",
+      "selected_count": 20,
+      "mitigation_ratio": 0.4887220125327352,
+      "risk_reduction": 0.0135940390638405,
+      "residual_failure_probability": 0.0142214444119114,
+      "used_latency_ms": 10.27752073306791,
+      "used_peak_extra_memory_bytes": 0
+    },
+    {
+      "model": "resnet50_eurosat",
+      "comparison_type": "predicted_budget_selection",
+      "method": "topk_dmr_compare_rerun",
+      "selected_count": 15,
+      "mitigation_ratio": 0.3470405697256623,
+      "risk_reduction": 0.0096531012326197,
+      "residual_failure_probability": 0.0181623822431322,
+      "used_latency_ms": 19.93603078207423,
+      "used_peak_extra_memory_bytes": 3211264
+    },
+    {
+      "model": "resnet50_eurosat",
+      "comparison_type": "predicted_budget_selection",
+      "method": "random_dmr_mean",
+      "selected_count": 14,
+      "mitigation_ratio": 0.1072665882969912,
+      "risk_reduction": 0.0029836720142752,
+      "residual_failure_probability": 0.0248318114614767,
+      "used_latency_ms": 19.91859913981604,
+      "used_peak_extra_memory_bytes": 3211264
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "comparison_type": "predicted_budget_selection",
+      "method": "ilp",
+      "selected_count": 40,
+      "mitigation_ratio": 0.4891378293800175,
+      "risk_reduction": 0.0119548542139614,
+      "residual_failure_probability": 0.0124858115777525,
+      "used_latency_ms": 31.25636826377213,
+      "used_peak_extra_memory_bytes": 3276800
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "comparison_type": "predicted_budget_selection",
+      "method": "greedy",
+      "selected_count": 40,
+      "mitigation_ratio": 0.4891378293800173,
+      "risk_reduction": 0.0119548542139614,
+      "residual_failure_probability": 0.0124858115777525,
+      "used_latency_ms": 31.256368263772128,
+      "used_peak_extra_memory_bytes": 3276800
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "comparison_type": "predicted_budget_selection",
+      "method": "topk_dmr_compare_rerun",
+      "selected_count": 40,
+      "mitigation_ratio": 0.4891378293800173,
+      "risk_reduction": 0.0119548542139614,
+      "residual_failure_probability": 0.0124858115777525,
+      "used_latency_ms": 31.25636826377213,
+      "used_peak_extra_memory_bytes": 3276800
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "comparison_type": "predicted_budget_selection",
+      "method": "random_dmr_mean",
+      "selected_count": 40,
+      "mitigation_ratio": 0.4711763194097994,
+      "risk_reduction": 0.0115158629516647,
+      "residual_failure_probability": 0.0129248028400491,
+      "used_latency_ms": 31.63651001491499,
+      "used_peak_extra_memory_bytes": 3276800
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "comparison_type": "same_event_runtime_activation_prior",
+      "method": "no_protection",
+      "selected_count": 0,
+      "critical_failures": 56,
+      "mitigation_ratio": 0.0,
+      "latency_avg_ms": 167.7848,
+      "extra_memory_bytes": 0
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "comparison_type": "same_event_runtime_activation_prior",
+      "method": "ilp_dmr_runtime_calibrated",
+      "selected_count": 40,
+      "critical_failures": 43,
+      "mitigation_ratio": 0.23214285714285715,
+      "latency_avg_ms": 198.0945,
+      "extra_memory_bytes": 3276800
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "comparison_type": "same_event_runtime_stratified",
+      "method": "no_protection",
+      "selected_count": 0,
+      "critical_failures": 77,
+      "mitigation_ratio": 0.0,
+      "latency_avg_ms": 167.7848,
+      "extra_memory_bytes": 0
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "comparison_type": "same_event_runtime_stratified",
+      "method": "ilp_dmr_runtime_calibrated",
+      "selected_count": 40,
+      "critical_failures": 13,
+      "mitigation_ratio": 0.8311688311688312,
+      "latency_avg_ms": 198.0945,
+      "extra_memory_bytes": 3276800
+    },
+    {
+      "model": "yolov10n_dior_full_e30_b16",
+      "comparison_type": "same_event_runtime_control_path",
+      "method": "control_path_dmr",
+      "selected_count": 5,
+      "critical_failures": 65,
+      "mitigation_ratio": 0.15584415584415584,
+      "latency_avg_ms": 169.0063,
+      "extra_memory_bytes": 48000
+    }
+  ]
+}
